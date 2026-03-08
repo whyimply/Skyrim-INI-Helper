@@ -4,7 +4,8 @@
     flex-direction: column;
     height: 100vh;
     background-color: rgb(30, 30, 30);
-    color: white;
+    color: white;   
+    overflow-x: hidden;
 }
 
 main {
