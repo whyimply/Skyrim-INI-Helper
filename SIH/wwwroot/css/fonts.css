@@ -1,0 +1,6 @@
+﻿@font-face {
+    font-family: 'VerdanaRegular'; /* Название шрифта */
+    src: url('/fonts/verdana.ttf') format('truetype'); /* Путь к файлу */
+    font-weight: normal; /* Жирность (normal, bold, 100-900) */
+    font-style: normal; /* Стиль (normal, italic) */
+}
