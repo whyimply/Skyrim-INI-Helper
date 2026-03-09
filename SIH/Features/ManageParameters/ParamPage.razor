@@ -1,7 +1,7 @@
 ﻿@page "/parameters"
 
 <div class="d-flex flex-row mh-100 gap-1" style="min-height: 0; flex: 1; margin-bottom: 5px;">
-    <aside class="d-flex flex-column overflow-auto mh-100 my-secondary-bg" style="max-width: 350px; min-width: 350px; flex: 1; scrollbar-gutter: stable;">
+    <aside class="d-flex flex-column overflow-auto mh-100 my-secondary-bg rounded-start-2" style="max-width: 350px; min-width: 350px; flex: 1; scrollbar-gutter: stable; margin-left: 5px;">
         <div class="accordion accordion-flush" id="accordionExample">
 
             @for (int i = 0; i < ParameterCategoryArr.Length; i++)
@@ -29,46 +29,7 @@
                                 <li>bSAO_CS_Enable</li>
                                 <li>bToggleSparkles</li>
                                 <li>bSAOEnable</li>
-                                <li>bScreenSpaceReflectionEnabled</li>
-                                bIBLFEnable=1
-                                bUse64bitsHDRRenderTarget=1
-                                iSaveGameScreenShotHeighWSt=192
-                                iSaveGameScreenShotWidthWS=320
-                                iSaveGameScreenShotHeight=192
-                                iSaveGameScreenShotWidth=256
-                                iShadowMaskQuarter=4
-                                bVolumetricLightingEnable=1
-                                iVolumetricLightingQuality=2
-                                bEnableImprovedSnow=1
-                                fLightLODStartFade=3500.0000
-                                bFXAAEnabled=0
-                                fLeafAnimDampenDistEnd=4600.0000
-                                fLeafAnimDampenDistStart=3600.0000
-                                fTreesMidLODSwitchDist=9999999.0000
-                                fMeshLODFadePercentDefault=1.2000
-                                fMeshLODFadeBoundDefault=256.0000
-                                fMeshLODLevel2FadeTreeDistance=2048.0000
-                                fMeshLODLevel1FadeTreeDistance=2844.0000
-                                fMeshLODLevel2FadeDist=999999.0000
-                                fMeshLODLevel1FadeDist=999999.0000
-                                fGamma=1.0000
-                                bBorderless=1
-                                bFull Screen=0
-                                iSize H=1080
-                                iSize W=1920
-                                iScreenShotIndex=16
-                                bTreesReceiveShadows=1
-                                bUsePrecipitationOcclusion=1
-                                bDrawLandShadows=0
-                                iMaxSkinDecalsPerFrame=25
-                                iMaxDecalsPerFrame=100
-                                iAdapter=0
-                                iNumSplits=2
-                                uBookRatio=2
-                                bForceCreateTarget=0
-                                iReflectionResolutionDivider=2
-                                iVSyncPresentInterval=1
-
+                                <li>bScreenSpaceReflectionEnabled</li>                            
                             </ul>
                         </div>
                     </div>
@@ -77,9 +38,15 @@
 
         </div>
     </aside>
-    <main class="d-flex flex-column my-secondary-bg">
-        <div id="header">
-            Header
+    <main class="d-flex flex-column my-secondary-bg rounded-end-2" style="flex: 1; margin-right: 5px;">
+        <div id="header" class="d-flex flex-column justify-content-between">
+            <i class="bi-arrow-left" style="font-size: 2rem; color: cornflowerblue;"></i>
+            <div>
+                Header
+            </div>
+            <div>
+
+            </div>
         </div>
         <div id="paramData">
             ParamData
@@ -90,7 +57,7 @@
 
 @code {
     private string[] ParameterCategoryArr = { 
-        "[Display] - Отображение",
+        "[Display]",
         "[General]",
         "[MAIN]",
         "[Interface]",
@@ -109,6 +76,5 @@
         "[LOD]",
         "[Launcher]",
         "[Bethesda.net]"
-
     };
 }
