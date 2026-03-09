@@ -1,6 +1,37 @@
 ﻿@page "/parameters"
 
-<h3>ParamPage</h3>
+<div class="d-flex flex-row" style="min-height: 0; flex: 1;">
+    <aside class="d-flex flex-column overflow-auto" style="max-width: 30%; flex: 1; scrollbar-gutter: stable;">
+        <div class="accordion accordion-flush" id="accordionExample">
+
+            @for (int i = 0; i < 3; i++)
+            {
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_@i" aria-expanded="true" aria-controls="collapse_@i">
+                            Элемент аккордеона #@i
+                        </button>
+                    </h2>
+                    <div id="collapse_@i" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>Это тело аккордеона @i элемента.</strong> Оно отображается по умолчанию, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </aside>
+    <main class="d-flex flex-column">
+        <div id="header">
+            Header
+        </div>
+        <div id="paramData">
+            ParamData
+        </div>
+    </main>
+    
+</div>
 
 @code {
 

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-bs-theme="dark">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>SIH</title>
     <base href="/" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-utilities.min.css" />
+
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="SIH.styles.css" />
@@ -16,7 +20,7 @@
 
     <div class="status-bar-safe-area"></div>
 
-    <div id="app">Loading...</div>
+    <div id="app" class="d-flex flex-column">Loading...</div>
 
     <div id="blazor-error-ui" data-nosnippet>
         An unhandled error has occurred.
@@ -25,6 +29,7 @@
     </div>
 
     <script src="_framework/blazor.webview.js" autostart="false"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

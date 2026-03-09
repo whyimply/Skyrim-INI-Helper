@@ -4,3 +4,10 @@
     font-weight: normal; /* Жирность (normal, bold, 100-900) */
     font-style: normal; /* Стиль (normal, italic) */
 }
+
+@font-face {
+    font-family: Futura;
+    font-style: normal;
+    font-weight: 300;
+    src: url(./FuturaPT-Light.BfLY5UcA.woff2) format("woff2");
+}
