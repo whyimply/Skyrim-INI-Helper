@@ -1,20 +1,75 @@
 ﻿@page "/parameters"
 
-<div class="d-flex flex-row mh-100" style="min-height: 0; flex: 1;">
-    <aside class="d-flex flex-column overflow-auto mh-100" style="max-width: 30%; flex: 1; scrollbar-gutter: stable;">
+<div class="d-flex flex-row mh-100 gap-1" style="min-height: 0; flex: 1; margin-bottom: 5px;">
+    <aside class="d-flex flex-column overflow-auto mh-100 my-secondary-bg" style="max-width: 350px; min-width: 350px; flex: 1; scrollbar-gutter: stable;">
         <div class="accordion accordion-flush" id="accordionExample">
 
-            @for (int i = 0; i < 3; i++)
+            @for (int i = 0; i < ParameterCategoryArr.Length; i++)
             {
-                <div class="accordion-item border-0">
+                <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_@i" aria-expanded="true" aria-controls="collapse_@i">
-                            Элемент аккордеона #@i
+                        <button class="accordion-button collapsed shadow-none p-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_@i" aria-expanded="true" aria-controls="collapse_@i">
+                            @ParameterCategoryArr[i]
                         </button>
                     </h2>
                     <div id="collapse_@i" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <strong>Это тело аккордеона @i элемента.</strong> Оно отображается по умолчанию, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                        <div class="accordion-body p-2">
+                            <ul class="d-flex flex-column p-0 m-0" style="list-style-type: none;">
+                                <li class="active">fShadowDistance</li>
+                                <li>iNumFocusShadow</li>
+                                <li>fInteriorShadowDistance</li>
+                                <li>ffocusShadowMapDoubleEveryXUnit</li>
+                                <li>iShadowMapResolution</li>
+                                <li>fDynamicDOFBlurMultiplier</li>
+                                <li>fProjectedUVNormalDetailTilingScale</li>
+                                <li>fProjectedUVDiffuseNormalTilingScale</li>
+                                <li>bEnableProjecteUVDiffuseNormals</li>
+                                <li>bUseTAA</li>
+                                <li>bIndEnable</li>
+                                <li>bSAO_CS_Enable</li>
+                                <li>bToggleSparkles</li>
+                                <li>bSAOEnable</li>
+                                <li>bScreenSpaceReflectionEnabled</li>
+                                bIBLFEnable=1
+                                bUse64bitsHDRRenderTarget=1
+                                iSaveGameScreenShotHeighWSt=192
+                                iSaveGameScreenShotWidthWS=320
+                                iSaveGameScreenShotHeight=192
+                                iSaveGameScreenShotWidth=256
+                                iShadowMaskQuarter=4
+                                bVolumetricLightingEnable=1
+                                iVolumetricLightingQuality=2
+                                bEnableImprovedSnow=1
+                                fLightLODStartFade=3500.0000
+                                bFXAAEnabled=0
+                                fLeafAnimDampenDistEnd=4600.0000
+                                fLeafAnimDampenDistStart=3600.0000
+                                fTreesMidLODSwitchDist=9999999.0000
+                                fMeshLODFadePercentDefault=1.2000
+                                fMeshLODFadeBoundDefault=256.0000
+                                fMeshLODLevel2FadeTreeDistance=2048.0000
+                                fMeshLODLevel1FadeTreeDistance=2844.0000
+                                fMeshLODLevel2FadeDist=999999.0000
+                                fMeshLODLevel1FadeDist=999999.0000
+                                fGamma=1.0000
+                                bBorderless=1
+                                bFull Screen=0
+                                iSize H=1080
+                                iSize W=1920
+                                iScreenShotIndex=16
+                                bTreesReceiveShadows=1
+                                bUsePrecipitationOcclusion=1
+                                bDrawLandShadows=0
+                                iMaxSkinDecalsPerFrame=25
+                                iMaxDecalsPerFrame=100
+                                iAdapter=0
+                                iNumSplits=2
+                                uBookRatio=2
+                                bForceCreateTarget=0
+                                iReflectionResolutionDivider=2
+                                iVSyncPresentInterval=1
+
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -22,7 +77,7 @@
 
         </div>
     </aside>
-    <main class="d-flex flex-column">
+    <main class="d-flex flex-column my-secondary-bg">
         <div id="header">
             Header
         </div>
@@ -34,5 +89,26 @@
 </div>
 
 @code {
+    private string[] ParameterCategoryArr = { 
+        "[Display] - Отображение",
+        "[General]",
+        "[MAIN]",
+        "[Interface]",
+        "[GamePlay]",
+        "[Controls]",
+        "[Particles]",
+        "[SaveGame]",
+        "[AudioMenu]",
+        "[Clouds]",
+        "[Water]",
+        "[TerrainManager]",
+        "[NavMesh]",
+        "[Trees]",
+        "[Grass]",
+        "[Decals]",
+        "[LOD]",
+        "[Launcher]",
+        "[Bethesda.net]"
 
+    };
 }

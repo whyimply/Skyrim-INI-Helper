@@ -1,1 +1,17 @@
-﻿
+﻿li {
+    /*width: fit-content;*/
+    padding: 8px;
+    border-radius: 10px;
+    padding-left: 15px;
+    font-size: 14px;
+    margin-bottom: 1px;
+}
+
+li:hover{
+    background-color: #171717;
+    cursor: pointer;
+}
+
+    li.active {
+        background-color: #101010;
+    }

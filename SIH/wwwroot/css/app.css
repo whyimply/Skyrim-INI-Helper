@@ -25,6 +25,10 @@ html, body {
     min-height: 100vh; 
 }
 
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 100px;
+}
 
 .container {
     background-color: var(--my-secondary-bg);
@@ -32,7 +36,17 @@ html, body {
 
 .accordion {
     --bs-accordion-color: var(--my-text-color);
+    --bs-accordion-btn-color: var(--my-text-color);
     --bs-accordion-bg: var(--my-secondary-bg);
+    background-color: var(--my-secondary-bg);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--my-text-color);
+    background-color: var(--my-secondary-bg);
+}
+
+.my-secondary-bg {
     background-color: var(--my-secondary-bg);
 }
 

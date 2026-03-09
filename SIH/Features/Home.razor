@@ -1,3 +1,10 @@
 ﻿@page "/"
 
-<h3>Home</h3>
+@inject NavigationManager NavigationManager
+
+@code{
+    protected override async Task OnInitializedAsync()
+    {
+        NavigationManager.NavigateTo("parameters");
+    }
+}
