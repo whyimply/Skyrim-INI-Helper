@@ -38,18 +38,23 @@
 
         </div>
     </aside>
-    <main class="d-flex flex-column my-secondary-bg rounded-end-2" style="flex: 1; margin-right: 5px;">
-        <div id="header" class="d-flex flex-column justify-content-between">
-            <i class="bi-arrow-left" style="font-size: 2rem; color: cornflowerblue;"></i>
-            <div>
-                Header
+    <main class="d-flex flex-column my-secondary-bg rounded-end-2 overflow-hidden" style="flex: 1; margin-right: 5px;">
+        <div id="header" class="d-flex flex-row align-items-center border-bottom" style="margin-left: 4px; margin-right: 4px; padding-bottom: 2px;">
+            <i class="bi bi-arrow-left" style="font-size: 2rem; color: white;"></i>
+            <div class="flex-grow-1" style="margin-left: 5px;">
+                fShadowDistance
             </div>
-            <div>
+            <i class="bi bi-arrow-right" style="font-size: 2rem; color: white;"></i>
+        </div>
+        <div id="paramData" class="d-flex flex-row overflow-auto" style="flex: 1;">
+            <div id="paramData-desc" style="width: 250px;">
+                DESC
 
             </div>
-        </div>
-        <div id="paramData">
-            ParamData
+            <div id="paramData-screen" style="flex: 1;">
+                SCREEN
+
+            </div>
         </div>
     </main>
     

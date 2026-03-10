@@ -46,6 +46,16 @@ html, body {
     background-color: var(--my-secondary-bg);
 }
 
+.bi::before {
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.bi:hover::before {
+    background-color: #101010;
+    cursor: pointer;
+}
+
 .my-secondary-bg {
     background-color: var(--my-secondary-bg);
 }
