@@ -1,4 +1,5 @@
 ﻿@page "/parameters"
+@using System.Text.Json
 
 <div class="d-flex flex-row mh-100 gap-1" style="min-height: 0; flex: 1; margin-bottom: 5px;">
     <aside class="d-flex flex-column overflow-auto mh-100 my-secondary-bg rounded-start-2" style="max-width: 350px; min-width: 350px; flex: 1; scrollbar-gutter: stable; margin-left: 5px;">
@@ -144,6 +145,7 @@
 
 @code {
     private int ParamValue;
+
     private string[] ParameterCategoryArr = { 
         "[Display]",
         "[General]",
@@ -165,4 +167,24 @@
         "[Launcher]",
         "[Bethesda.net]"
     };
+
+    private string[] MyParameterCategoryArr = {
+        "[Display]",
+
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        var stream = await FileSystem.OpenAppPackageFileAsync("Resources/Data/ini_values_info.json");
+
+        using var reader = new StreamReader(stream);
+        var json = await reader.ReadToEndAsync();
+
+        var paramList = JsonSerializer.Deserialize<List<Parameter>>(json)!;
+
+        foreach (var param in paramList)
+        {
+            param.Load("C:\\Games\\SkyrimRP\\profiles\\SkyrimRP");
+        }
+    }
 }
