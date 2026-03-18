@@ -6,7 +6,9 @@ namespace SIH.Features.ManageParameters;
 public class Parameter
 {
     required public string Name { get; set; }
+    required public string Designation { get; set; }
     required public string Section { get; set; }
+    required public string MySection { get; set; } 
     required public int GlobalPosition { get; set; }
     required public string Type { get; set; }
     required public string[] DescriptionSections { get; set; }

@@ -951,9 +951,9 @@
   {
     "Name": "bForceCreateTarget",
     "GlobalPosition": 42,
-    "Designation": "Целевой рендер пост-эффектов",
+    "Designation": "Буферы пост-эффектов",
     "Section": "Display",
-    "MySection": "Тени",
+    "MySection": "Прочее",
     "Type": "bool",
     "DescriptionSections": [
       "Управляет возможностью переиспользовать буферы пост‑эффектов. Включение разрешает переиспользовать подходящие буферы, что повышает производительность. Отключение заставляет каждый раз пересоздавать буфер.",
@@ -1004,6 +1004,282 @@
     "DescriptionSections": [
       "Управляет вертикальной синхронизацией. 1 - включить, 0 - выключить.",
       "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bDoDepthOfField",
+    "GlobalPosition": 45,
+    "Designation": "Глубина резкости",
+    "Section": "Imagespace",
+    "MySection": "Размытие",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет возможностью камеры имитировать работу человеческого глаза: размывать фон и объекты не в фокусе, а также делает окружение мутным под водой. Отключение увеличивает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bLensFlare",
+    "GlobalPosition": 46,
+    "Designation": "Блики от солнца",
+    "Section": "Imagespace",
+    "MySection": "Прочее",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет возможностью камеры создавать эффект блика объектива от солнца.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "uLargeRefLODGridSize",
+    "GlobalPosition": 47,
+    "Designation": "За пределами uGridsToLoad",
+    "Section": "General",
+    "MySection": "Прочее",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет размером сетки за пределами uGridsToLoad для отображения полных моделей объектов, вместо LOD. Для правильного эффекта, необходимо устанавливать нечётные значения большие uGridsToLoad. Установка этого размера на тот же размер, что и uGridsToLoad, не даст эффекта. Чётные значения будут окргулены до нечётных в меньшую сторону.",
+      "Формат значение - целое, положительное число: 0, 1, 2, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "9",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fSkyCellRefFadeDistance",
+    "GlobalPosition": 48,
+    "Designation": "Небесные объекты",
+    "Section": "MAIN",
+    "MySection": "Облака",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит объекты в небесных ячейках. Особенно это заметно при отображении облаков на склонах удалённых гор. Меньшие значения увеличивают производительность. Рекомендуется установить на 600000.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "150000.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fMouseCursorSpeed",
+    "GlobalPosition": 49,
+    "Designation": "Скорость курсора",
+    "Section": "Interface",
+    "MySection": "Камера и мышь",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет скоростью курсора",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fMouseHeadingSensitivity",
+    "GlobalPosition": 50,
+    "Designation": "Скорость камеры",
+    "Section": "Controls",
+    "MySection": "Камера и мышь",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет скоростью камеры",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "0.0125",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bAlwaysRunByDefault",
+    "GlobalPosition": 51,
+    "Designation": "Режим передвижения",
+    "Section": "Controls",
+    "MySection": "Прочее",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет режимом передвижения игрока по умолчанию (при запуске игры). Отключите для ходьбы по умолчанию. Включите для бега.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iMaxDesired",
+    "GlobalPosition": 52,
+    "Designation": "Частицы эффектов",
+    "Section": "Particles",
+    "MySection": "Эффекты",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет количеством максимальное количество частиц, «желательных» для отрисовки. Это влияет на дым, искры, свет и подобные эффекты. Если установлено в 0, чаще всего частицы не видны, но иногда они «вспыхивают», отсюда и «желаемое». Очень высокие значения могут привести к тому, что некоторые ветреные снежные бури становятся слишком сильными. Меньшие значение увеличивают производительность.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "750",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bUseWaterDisplacements",
+    "GlobalPosition": 53,
+    "Designation": "Движение воды",
+    "Section": "Water",
+    "MySection": "Вода",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет движением/рябью воды (например, водный след за вами, когда вы проходите через неё). Рекомендуется включить его. Отключение увеличивает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bUseWaterReflections",
+    "GlobalPosition": 54,
+    "Designation": "Отражение на воде",
+    "Section": "Water",
+    "MySection": "Вода",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет отражением воды, но похоже, отключение параметра вызывает глюки. Рекомендуется включить его.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bUseWaterRefractions",
+    "GlobalPosition": 54,
+    "Designation": "Преломление света на воде",
+    "Section": "Water",
+    "MySection": "Вода",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет преломлением света на воде, но похоже не используется. ",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bUseWaterDepth",
+    "GlobalPosition": 55,
+    "Designation": "Глубина воды.",
+    "Section": "Water",
+    "MySection": "Вода",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет визуальными эффектами глубины воды. В теории не работает.",
+      "Формат значение - включено/отключено: (1 или 0)"
     ],
     "Warning": "",
     "DefaultValue": "1",
