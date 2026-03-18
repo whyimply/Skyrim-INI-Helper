@@ -625,6 +625,397 @@
         "ScreenshotPath": ""
       }
     ]
+  },
+  {
+    "Name": "fMeshLODFadePercentDefault",
+    "GlobalPosition": 28,
+    "Designation": "Затухание детализации (Длительность)",
+    "Section": "Display",
+    "MySection": "Прочее",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором будет плавный переход между низкополигональными LOD‑моделями и полноразмерными 3D‑моделями объектов (ветки, камни, кусты, сундуки, лестницы и тд.). Параметр является коэфициентом, поэтому итоговое расстояние перехода моделей рассчитывается как fMeshLODFadePercentDefault * fMeshLODFadeBoundDefault. Значения большие 1.0 обеспечивают более длительный переход моделей, меньшие более резкий, при значении 0 будет видна точная граница перехода моделей. Большие значения увеличивают производительность, так как большее кол-во полных моделей будут заменены LOD моделями.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1.2000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fMeshLODFadeBoundDefault",
+    "GlobalPosition": 29,
+    "Designation": "Затухание детализации (Начало)",
+    "Section": "Display",
+    "MySection": "Прочее",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором начнётся плавный переход между низкополигональными LOD‑моделями и полноразмерными 3D‑моделями объектов (ветки, камни, кусты, сундуки, лестницы и тд.). ?? Большие значения увеличивают производительность, так как большее кол-во полных моделей будут заменены LOD моделями.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "256.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fMeshLODLevel1FadeTreeDistance",
+    "GlobalPosition": 30,
+    "Designation": "Затухание детализации деревьев (1 уровень)",
+    "Section": "Display",
+    "MySection": "Деревья",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит полные 3D‑модели деревьев. Все меши деревьев за пределами этого расстояния заменяются на низкополигональные LOD-модели 1 уровня. Чем выше уровень LOD тем меньше полигонов и хуже выглядит модель. Большие значения увеличивают кол-во полных моделей деревьев вокруг игрока. Меньшие значения увеличивают производительность. Увеличение значения выше 16896 - не имеет смысла.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "2844",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fMeshLODLevel2FadeTreeDistance",
+    "GlobalPosition": 31,
+    "Designation": "Затухание детализации деревьев (2 уровень)",
+    "Section": "Display",
+    "MySection": "Деревья",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит низкополигональные LOD-модели деревьев 1 уровня. Все меши деревьев за пределами этого расстояния заменяются на низкополигональные LOD-модели 2 уровня. Чем выше уровень LOD тем меньше полигонов и хуже выглядит модель. Значения меньше чем fMeshLODLevel1FadeTreeDistance будут обрезаны до его значения. Большие значения увеличивают кол-во низкополигональные LOD-моделей деревьев 1 уровня. Меньшие значения увеличивают производительность. Увеличение значения выше 16896 - не имеет смысла.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "2048",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fMeshLODLevel1FadeDist",
+    "GlobalPosition": 32,
+    "Designation": "Затухание детализации объектов (1 уровень)",
+    "Section": "Display",
+    "MySection": "Прочее",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит полные 3D‑модели объектов. Все меши объектов за пределами этого расстояния заменяются на низкополигональные LOD-модели 1 уровня. Чем выше уровень LOD тем меньше полигонов и хуже выглядит модель. Большие значения увеличивают кол-во полных моделей объектов вокруг игрока. Меньшие значения увеличивают производительность. Увеличение значения выше 16896 - не имеет смысла.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "4096",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fMeshLODLevel2FadeDist",
+    "GlobalPosition": 33,
+    "Designation": "Затухание детализации объектов (2 уровень)",
+    "Section": "Display",
+    "MySection": "Прочее",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит низкополигональные LOD-модели объектов 1 уровня. Все меши объектов за пределами этого расстояния заменяются на низкополигональные LOD-модели 2 уровня. Чем выше уровень LOD тем меньше полигонов и хуже выглядит модель. Значения меньшие чем fMeshLODLevel1FadeDist будут обрезаны до его значения. Большие значения увеличивают кол-во низкополигональные LOD-моделей объектов 1 уровня. Меньшие значения увеличивают производительность. Увеличение значения выше 16896 - не имеет смысла.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "3072",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bBorderless",
+    "GlobalPosition": 34,
+    "Designation": "Безрамочный режим",
+    "Section": "Display",
+    "MySection": "Экран",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет переключением рамки в оконном режиме.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bFull Screen",
+    "GlobalPosition": 35,
+    "Designation": "Полноэкранный режим.",
+    "Section": "Display",
+    "MySection": "Экран",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет переключением экранного режима окна. Если в параметрах iSize H и iSize W выставлено родное разрешение монитора - рекомендуется отключить.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iSize H",
+    "GlobalPosition": 36,
+    "Designation": "Высота разрешения игры.",
+    "Section": "Display",
+    "MySection": "Экран",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет высотой разрешения игры.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1080",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iSize W",
+    "GlobalPosition": 37,
+    "Designation": "Ширина разрешения игры.",
+    "Section": "Display",
+    "MySection": "Экран",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет шириной разрешения игры.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1920",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bUsePrecipitationOcclusion",
+    "GlobalPosition": 38,
+    "Designation": "Окклюзия оссадков.",
+    "Section": "Display",
+    "MySection": "Прочее",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет окклюзией оссадков. Снег и дождь не будут видны под крышами, выступами и тд. Отключение увеличивает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iMaxSkinDecalsPerFrame",
+    "GlobalPosition": 39,
+    "Designation": "Количество проецируемых текстур на кожу (skin).",
+    "Section": "Display",
+    "MySection": "Прочее",
+    "Type": "int",
+    "DescriptionSections": [
+      "Упоавляет максимальным количеством проецируемых текстур на коже (skin) за кадр. Например кровь на игроке или нпс. Рекомендуется установить 100.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "3",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iMaxDecalsPerFrame",
+    "GlobalPosition": 40,
+    "Designation": "Количество проецируемых текстур.",
+    "Section": "Display",
+    "MySection": "Прочее",
+    "Type": "int",
+    "DescriptionSections": [
+      "Упоавляет максимальным количеством проецируемых текстур за кадр. Рекомендуется установить 250.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "10",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iNumSplits",
+    "GlobalPosition": 41,
+    "Designation": "Количество сегментов теней.",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "int",
+    "DescriptionSections": [
+      "Упоавляет количеством сегментов, на которые делится карта теней. Большие значения увеличивает плавность теней вдали. Меньшие значения увеличивают производительность. Варианты значений: 1,2,3,4.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "10",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bForceCreateTarget",
+    "GlobalPosition": 42,
+    "Designation": "Целевой рендер пост-эффектов",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет возможностью переиспользовать буферы пост‑эффектов. Включение разрешает переиспользовать подходящие буферы, что повышает производительность. Отключение заставляет каждый раз пересоздавать буфер.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iReflectionResolutionDivider",
+    "GlobalPosition": 43,
+    "Designation": "Разрешение отражений в SSR.",
+    "Section": "Display",
+    "MySection": "Отражения",
+    "Type": "int",
+    "DescriptionSections": [
+      "Упоавляет разрешением отражений в экранном пространстве. Работает как обратный коэфициент, поэтому большие значения уменьшают итоговое разрешение отражения и увеличивают производительность. Меньшие значения увеличивают качество. 0 - вызывает краш игры.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "2",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iVSyncPresentInterval",
+    "GlobalPosition": 44,
+    "Designation": "Вертикальная синхронизация",
+    "Section": "Display",
+    "MySection": "Отражения",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет вертикальной синхронизацией. 1 - включить, 0 - выключить.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
   }
 
 ]
