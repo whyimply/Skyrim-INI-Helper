@@ -1249,7 +1249,7 @@
   },
   {
     "Name": "bUseWaterRefractions",
-    "GlobalPosition": 54,
+    "GlobalPosition": 55,
     "Designation": "Преломление света на воде",
     "Section": "Water",
     "MySection": "Вода",
@@ -1272,7 +1272,7 @@
   },
   {
     "Name": "bUseWaterDepth",
-    "GlobalPosition": 55,
+    "GlobalPosition": 56,
     "Designation": "Глубина воды.",
     "Section": "Water",
     "MySection": "Вода",
@@ -1285,6 +1285,397 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fTreeLoadDistance",
+    "GlobalPosition": 57,
+    "Designation": "Дальность прорисовки LOD деревьев",
+    "Section": "TerrainManager",
+    "MySection": "Деревья",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит низкополигональные LOD-модели деревьев всех уровней. Большие значения увеличивают дистанцию, на которых видны LOD модели, меньшие увеличивают производительность.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "25000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fBlockLevel0Distance",
+    "GlobalPosition": 58,
+    "Designation": "Дальность прорисовки ландшафта (0 уровень)",
+    "Section": "TerrainManager",
+    "MySection": "Ландшафт",
+    "Type": "float",
+    "DescriptionSections": [
+      "",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "35000.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fBlockLevel1Distance",
+    "GlobalPosition": 59,
+    "Designation": "Дальность прорисовки ландшафта (1 уровень)",
+    "Section": "TerrainManager",
+    "MySection": "Ландшафт",
+    "Type": "float",
+    "DescriptionSections": [
+      "",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "70000.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fBlockMaximumDistance",
+    "GlobalPosition": 60,
+    "Designation": "Дальность прорисовки ландшафта (MAX уровень)",
+    "Section": "TerrainManager",
+    "MySection": "Ландшафт",
+    "Type": "float",
+    "DescriptionSections": [
+      "",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "250000.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fSplitDistanceMult",
+    "GlobalPosition": 61,
+    "Designation": "Множитель дальности прорисовки",
+    "Section": "TerrainManager",
+    "MySection": "Ландшафт",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет множителем расстояния для уровней ландшафтного LOD.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1.5000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bRenderSkinnedTrees",
+    "GlobalPosition": 62,
+    "Designation": "Улучшенные деревья",
+    "Section": "Trees",
+    "MySection": "Деревья",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет улучшенной отрисовкой деревьев. Включение позволяет игре рендерить более красивые, пушистые деревья. Оключение повышает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "uiMaxSkinnedTreesToRender",
+    "GlobalPosition": 63,
+    "Designation": "Количество улучшенных деревьев",
+    "Section": "Trees",
+    "MySection": "Деревья",
+    "Type": "uint",
+    "DescriptionSections": [
+      "Управляет количеством улучшенных деревьев вокруг игрока. Большие значения увеличивают кол-во красивых деревьев, меньшие - повышают производительность.",
+      "Формат значение - целое, положительное число: (0, 1, 2, ...)"
+    ],
+    "Warning": "",
+    "DefaultValue": "40",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fGrassStartFadeDistance",
+    "GlobalPosition": 64,
+    "Designation": "Дальность прорисовки травы",
+    "Section": "Grass",
+    "MySection": "Трава",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит траву. Большие значения увеличивают дальность отображения, меньшие - повышают производительность. Зависит ли от границ.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "40",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fLODFadeOutMultSkyCell",
+    "GlobalPosition": 65,
+    "Designation": "Множитель дальности небесных объектов.",
+    "Section": "LOD",
+    "MySection": "Облака",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет множителем дальности небесных объектов. Большие значения увеличивают дальность отображения, меньшие - повышают производительность.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fLODFadeOutMultObjects",
+    "GlobalPosition": 66,
+    "Designation": "Дистанция прорисовки объектов.",
+    "Section": "LOD",
+    "MySection": "Объекты",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием, на котором игрок видит мелкие объекты. Большие значения увеличивают дальность отображения, меньшие - повышают производительность.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "5",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fLODFadeOutMultItems",
+    "GlobalPosition": 67,
+    "Designation": "Дистанция прорисовки предметов.",
+    "Section": "LOD",
+    "MySection": "Прочее",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием, на котором игрок видит предметы. Большие значения увеличивают дальность отображения, меньшие - повышают производительность.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "3",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fLODFadeOutMultActors",
+    "GlobalPosition": 68,
+    "Designation": "Дистанция прорисовки персонажей.",
+    "Section": "LOD",
+    "MySection": "Объекты",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием, на котором игрок видит персонажей. Большие значения увеличивают дальность отображения, меньшие - повышают производительность.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "6",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fShadowLODMaxStartFade",
+    "GlobalPosition": 69,
+    "Designation": "Тени LOD объектов",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором видны тени от низкополигональных LOD-моделей (деревья, объекты, ландшафт). Большие значения увеличивают расстояние на котором видны тени, меньшие - увеличивают производительность. Работает ли?",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1000",
+    "CurrentValue": "",
+    "SourceFile": "skyrim.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fSpecularLODMaxStartFade",
+    "GlobalPosition": 70,
+    "Designation": "Блики, отражения света LOD объектов",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором видны блики, отражения света от низкополигональных LOD-моделей (деревья, объекты, ландшафт). Большие значения увеличивают расстояние на котором видны блики, меньшие - увеличивают производительность. Работает ли?",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "2000",
+    "CurrentValue": "",
+    "SourceFile": "skyrim.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fLightLODMaxStartFade",
+    "GlobalPosition": 71,
+    "Designation": "Блики, отражения света LOD объектов",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором видны блики, отражения света от низкополигональных LOD-моделей (деревья, объекты, ландшафт). Большие значения увеличивают расстояние на котором видны блики, меньшие - увеличивают производительность. Работает ли?",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "2000",
+    "CurrentValue": "",
+    "SourceFile": "skyrim.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "uGridsToLoad",
+    "GlobalPosition": 72,
+    "Designation": "Сетка загрузки",
+    "Section": "General",
+    "MySection": "Прочее",
+    "Type": "uint",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором прорисовываются полные модели всего.",
+      "Формат значение - целое положительно число: 0, 1, 2, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "5",
+    "CurrentValue": "",
+    "SourceFile": "skyrim.ini",
+    "ValueOptions": [
+      {
+        "Value": "",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fNearDistance",
+    "GlobalPosition": 71,
+    "Designation": "Дистанция обрезки геометрии",
+    "Section": "Display",
+    "MySection": "Прочее",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором обрезается геометрия.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "15",
+    "CurrentValue": "",
+    "SourceFile": "skyrim.ini",
     "ValueOptions": [
       {
         "Value": "",
