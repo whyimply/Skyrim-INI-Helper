@@ -33,10 +33,22 @@ public class Parameter
         string filePath = $"{path}\\{SourceFile}";
 
         var parser = new FileIniDataParser();
-        var data = new IniData();
 
-        data["Display"]["bFull Screen"] = CurrentValue;
+        // 1. Читаем существующий файл
+        IniData data;
+        if (File.Exists(filePath))
+        {
+            data = parser.ReadFile(filePath);
+        }
+        else
+        {
+            data = new IniData();
+        }
 
+        // 2. Обновляем значение (или создаём, если нет)
+        data[Section][Name] = CurrentValue;
+
+        // 3. Записываем обратно
         parser.WriteFile(filePath, data);
     }
 
