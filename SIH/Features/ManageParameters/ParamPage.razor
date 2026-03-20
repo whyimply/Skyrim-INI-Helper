@@ -10,7 +10,7 @@
             {
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed shadow-none p-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_@i" aria-expanded="true" aria-controls="collapse_@i">
+                        <button class="accordion-button collapsed shadow-none" style="padding: 12px;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_@i" aria-expanded="true" aria-controls="collapse_@i">
                             @_mySectionList[i]
                         </button>
                     </h2>
@@ -19,8 +19,8 @@
                             <ul class="d-flex flex-column p-0 m-0" style="list-style-type: none;">
                                 @foreach (var param in _paramList.FindAll(p => p.MySection == _mySectionList[i]))
                                 {
-                                    <NavLink href=@($"parameters/{param.Name}") Match="NavLinkMatch.All">
-                                        <li class="@(paramName == param.Name ? "active" : "")">@param.Name</li>
+                                    <NavLink style="color: #d4d4d4; text-decoration:none;" href=@($"parameters/{param.Name}") Match="NavLinkMatch.All">
+                                        <li class="@(paramName == param.Name ? "active" : "")">@param.Designation</li>
                                     </NavLink>                               
                                 }                                                   
                             </ul>
@@ -37,16 +37,20 @@
             <div id="header" class="d-flex flex-row align-items-center border-bottom" style="margin-left: 4px; margin-right: 4px; padding-bottom: 2px;">
                 <i class="bi bi-arrow-left" style="font-size: 2rem; color: white;"></i>
                 <div class="flex-grow-1" style="margin-left: 5px;">
-                    @($"{_paramList.FirstOrDefault(p => p.Name == paramName)!.Name} - '{_paramList.FirstOrDefault(p => p.Name == paramName)!.Designation}'")
+                    @($"{_paramList.FirstOrDefault(p => p.Name == paramName)!.Designation} - \"{_paramList.FirstOrDefault(p => p.Name == paramName)!.Name}\"")
                 </div>
                 <i class="bi bi-arrow-right" style="font-size: 2rem; color: white;"></i>
             </div>
             <div id="paramData" class="d-flex flex-row overflow-auto" style="flex: 1;">
                 <div id="paramData-desc" class="card m-1 p-1 justify-content-between" style="width: min-content; font-size: 15px;">
-                    @for (int i = 0; i < _paramList.FirstOrDefault(p => p.Name == paramName)!.DescriptionSections.Length; i++)
-                    {
-                        @_paramList.FirstOrDefault(p => p.Name == paramName)!.DescriptionSections[i]<br><br>
-                    }
+                    <div style="width: fit-content; overflow:auto;">
+                        @for (int i = 0; i < _paramList.FirstOrDefault(p => p.Name == paramName)!.DescriptionSections.Length; i++)
+                        {
+                            @_paramList.FirstOrDefault(p => p.Name == paramName)!.DescriptionSections[i]<br><br>
+                        }
+                        <div>По умолчанию: @_paramList.FirstOrDefault(p => p.Name == paramName)!.DefaultValue</div>
+                    </div>                 
+
                     <div id="footer" class="d-flex flex-column align-items-start p-1 gap-1 border-top" style="padding-bottom: 2px; width: min-content;">
                         <div class="d-flex flex-row text-center align-items-center pb-1 gap-1" style="width: stretch;">
                             <div>Значение: </div>
@@ -103,11 +107,6 @@
         var json = await reader.ReadToEndAsync();
 
         _paramList = JsonSerializer.Deserialize<List<Parameter>>(json)!;
-
-        foreach (var param in _paramList)
-        {
-            param.Load("C:\\Games\\SkyrimRP\\profiles\\SkyrimRP");
-        }
 
         foreach (var param in _paramList)
         {
