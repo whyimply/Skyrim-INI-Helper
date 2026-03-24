@@ -1,5 +1,6 @@
 ﻿using IniParser;
 using IniParser.Model;
+using System.Text;
 
 namespace SIH.Features.ManageParameters;
 
@@ -22,7 +23,11 @@ public class Parameter
     public void Load(string path)
     {
         var parser = new FileIniDataParser();
-        var data = parser.ReadFile($"{path}\\{SourceFile}");
+
+        // убираем пробелы вокруг "="
+        parser.Parser.Configuration.AssigmentSpacer = "";
+
+        var data = parser.ReadFile($"{path}\\{SourceFile}", new UTF8Encoding(false));
 
         CurrentValue = data[Section][Name];
     }
@@ -33,6 +38,9 @@ public class Parameter
         string filePath = $"{path}\\{SourceFile}";
 
         var parser = new FileIniDataParser();
+
+        // убираем пробелы вокруг "="
+        parser.Parser.Configuration.AssigmentSpacer = "";
 
         // 1. Читаем существующий файл
         IniData data;
@@ -49,7 +57,7 @@ public class Parameter
         data[Section][Name] = CurrentValue;
 
         // 3. Записываем обратно
-        parser.WriteFile(filePath, data);
+        parser.WriteFile(filePath, data, new UTF8Encoding(false));
     }
 
     public void RestoreToDefault(string path)
