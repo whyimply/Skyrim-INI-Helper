@@ -27,7 +27,14 @@ public class Parameter
         // убираем пробелы вокруг "="
         parser.Parser.Configuration.AssigmentSpacer = "";
 
-        var data = parser.ReadFile($"{path}\\{SourceFile}", new UTF8Encoding(false));
+        var filePath = $"{path}\\{SourceFile}";
+
+        if (!File.Exists(filePath))
+        {
+            throw new Exception($"Файл конфигурации по указанному пути: {filePath} не найден.");
+        }
+
+        var data = parser.ReadFile(filePath, new UTF8Encoding(false));
 
         CurrentValue = data[Section][Name];
     }
@@ -37,21 +44,25 @@ public class Parameter
         CurrentValue = value;
         string filePath = $"{path}\\{SourceFile}";
 
+        var attributes = File.GetAttributes(filePath);
+
+        // убираем только ReadOnly
+        attributes &= ~FileAttributes.ReadOnly;
+
+        File.SetAttributes(filePath, attributes);
+
         var parser = new FileIniDataParser();
 
         // убираем пробелы вокруг "="
         parser.Parser.Configuration.AssigmentSpacer = "";
 
         // 1. Читаем существующий файл
-        IniData data;
-        if (File.Exists(filePath))
+        if (!File.Exists(filePath))
         {
-            data = parser.ReadFile(filePath);
+            throw new Exception($"Файл конфигурации по указанному пути: {filePath} не найден.");           
         }
-        else
-        {
-            data = new IniData();
-        }
+
+        var data = parser.ReadFile(filePath);
 
         // 2. Обновляем значение (или создаём, если нет)
         data[Section][Name] = CurrentValue;

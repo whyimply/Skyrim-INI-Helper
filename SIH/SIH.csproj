@@ -55,9 +55,11 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Blazor.LocalStorage" Version="9.0.1" />
+        <PackageReference Include="CommunityToolkit.Maui" Version="14.0.1" />
         <PackageReference Include="ini-parser-netstandard" Version="2.5.3" />
-        <PackageReference Include="Microsoft.Maui.Controls" Version="10.0.50" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="10.0.50" />
+        <PackageReference Include="Microsoft.Maui.Controls" Version="10.0.51" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="10.0.51" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.5" />
     </ItemGroup>
 
