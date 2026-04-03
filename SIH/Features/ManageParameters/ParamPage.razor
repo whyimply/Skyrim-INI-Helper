@@ -64,6 +64,38 @@
     <div class="modal-backdrop fade show"></div>
 }
 
+@if (_isParamGaleryOpen)
+{
+    
+    <div  class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="d-flex flex-column align-items-center justify-content-between vh-100 vw-100">
+            <div class="position-relative d-flex mt-2" style="width: 75vw; height: auto;">
+                <img class="rounded" style="max-width: 100%;" src="/images/@(_currentParameter!.Name)/@(_currentParameter!.Name)=@(_targetGaleryImageValue).png" alt="...">
+                <div class="position-absolute btn btn-close rounded " style="right: 15px; top: 15px; background-color: white;" @onclick=@(() => { _isParamGaleryOpen = false; })></div>
+            </div>
+
+            <div class="d-flex align-content-center justify-content-center gap-3 mb-4" style="max-width: 15vw; height: auto;">
+                @for (int i = 0; i < _currentParameter!.ValueOptions.Length; i++)
+                {
+                    int k = i;
+                    <div class="d-flex align-content-between" style=" @(_currentParameter!.ValueOptions[i].Value == _targetGaleryImageValue ? "border: solid 1px orange;" : "")">
+                        <div class="card rounded-0">
+                            <img style="cursor: pointer; max-height: 10vh;" src="/images/@(_currentParameter!.Name)/@(_currentParameter!.Name)=@(_currentParameter!.ValueOptions[i].Value).png" alt="..." @onclick=@(() => { _targetGaleryImageValue = _currentParameter!.ValueOptions[k].Value; })>
+                                <div class="card-body p-0">
+                                <p class="card-text">=@_currentParameter!.ValueOptions[i].Value</p>
+                            </div>
+                        </div>
+                    </div>                                      
+                }               
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Backdrop -->
+    <div  class="modal-backdrop fade show"></div>
+}
+
 
 <div class="d-flex flex-row mh-100 gap-1" style="min-height: 0; flex: 1; margin-bottom: 5px; margin-top: 5px;">
     <aside class="d-flex flex-column overflow-auto mh-100 my-secondary-bg rounded-start-2" style="max-width: 350px; min-width: 350px; flex: 1; scrollbar-gutter: stable; margin-left: 5px;">
@@ -95,29 +127,29 @@
     </aside>
 
     <main class="d-flex flex-column my-secondary-bg rounded-end-2 overflow-hidden" style="flex: 1; margin-right: 5px; position: relative;">
-        @if (paramName is not null)
+        @if (paramName is not null && _currentParameter is not null)
         {
             <div id="header" class="d-flex flex-row align-items-center border-bottom p-2" style="margin-left: 4px; margin-right: 4px; padding-bottom: 2px;">
                 <i class="bi bi-arrow-left" style="font-size: 2rem; color: white;" hidden></i>
                 <div class="flex-grow-1" style="margin-left: 5px;">
-                    @($"{_paramList.FirstOrDefault(p => p.Name == paramName)!.Designation} - \"{_paramList.FirstOrDefault(p => p.Name == paramName)!.Name}\"")
+                    @($"{_currentParameter!.Designation} - \"{_currentParameter!.Name}\"")
                 </div>
                 <i class="bi bi-arrow-right" style="font-size: 2rem; color: white;" hidden></i>
             </div>
             <div id="paramData" class="d-flex flex-row overflow-auto" style="flex: 1;">
                 <div id="paramData-desc" class="card m-1 p-1 justify-content-between" style="width: min-content; font-size: 15px;">
                     <div style="width: fit-content; overflow:auto;">
-                        @for (int i = 0; i < _paramList.FirstOrDefault(p => p.Name == paramName)!.DescriptionSections.Length; i++)
+                        @for (int i = 0; i < _currentParameter!.DescriptionSections.Length; i++)
                         {
-                            @_paramList.FirstOrDefault(p => p.Name == paramName)!.DescriptionSections[i]<br><br>
+                            @_currentParameter!.DescriptionSections[i]<br><br>
                         }
-                        <div>По умолчанию: @_paramList.FirstOrDefault(p => p.Name == paramName)!.DefaultValue</div>
+                        <div>По умолчанию: @_currentParameter!.DefaultValue</div>
                     </div>                 
 
                     <div id="footer" class="d-flex flex-column align-items-start p-1 gap-1 border-top" style="padding-bottom: 2px; width: min-content;">
                         <div class="d-flex flex-row text-center align-items-center pb-1 gap-1" style="width: stretch;">
                             <div>Значение: </div>
-                            <InputText @bind-Value=@_paramFormValue class="" style="flex:1;" autocomplete="off" />
+                            <InputText @bind-Value=@_currentParameter.CurrentValue class="" style="flex:1;" autocomplete="off" />
                         </div>
                    
                         <div class="d-flex flex-row align-items-center gap-1">
@@ -129,14 +161,15 @@
                                       
                 <div id="paramData-screen" class="p-1" style="flex: 1; overflow-x:hidden; width: min-content;">
                     <div class="row row-cols-1 row-cols-md-2 g-3">
-                        @for (int i = 0; i < _paramList.FirstOrDefault(p => p.Name == paramName)!.ValueOptions.Length; i++)
+                        @for (int i = 0; i < _currentParameter!.ValueOptions.Length; i++)
                         {
+                            int k = i;
                             <div class="col">
                                 <div class="card h-100">
-                                    <img src="/images/@(_paramList.FirstOrDefault(p => p.Name == paramName)!.ValueOptions[i].ScreenshotPath)" class="card-img-top" alt="...">
+                                    <img src="/images/@(_currentParameter!.Name)/@(_currentParameter!.Name)=@(_currentParameter!.ValueOptions[i].Value).png" class="card-img-top" alt="..." style="cursor:pointer;" @onclick=@(() => { _isParamGaleryOpen = true; _targetGaleryImageValue = _currentParameter!.ValueOptions[k].Value; } )>
                                     <div class="card-body">
-                                        <h6 class="card-title">@(_paramList.FirstOrDefault(p => p.Name == paramName)!.Name)=@(_paramList.FirstOrDefault(p => p.Name == paramName)!.ValueOptions[i].Value)</h6>
-                                        <p class="card-text">@(_paramList.FirstOrDefault(p => p.Name == paramName)!.ValueOptions[i].Remark)</p>
+                                        <h6 class="card-title">@(_currentParameter!.Name)=@(_currentParameter!.ValueOptions[i].Value)</h6>
+                                        <p class="card-text">@(_currentParameter!.ValueOptions[i].Remark)</p>
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +196,7 @@
     [Parameter]
     public string? paramName { get; set; }
 
-    private string _paramFormValue = default!;
+    private Parameter? _currentParameter;
 
     private List<string> _mySectionList = [];
     private List<Parameter> _paramList = [];
@@ -175,6 +208,11 @@
     private string _modalText = "";
 
     private const string _confPathKey = "confPath";
+
+    private bool _isParamGaleryOpen = false;
+
+    private string _targetGaleryImageValue = "";
+
 
     private async Task PickFolderAsync()
     {       
@@ -218,10 +256,10 @@
     {
         if (paramName is not null)
         {
-            var param = _paramList.FirstOrDefault(p => p.Name == paramName)!;
+            _currentParameter = _paramList.FirstOrDefault(p => p.Name == paramName)!;
             try
             {
-                param.Load(_confPath);
+                _currentParameter.Load(_confPath);
             }
             catch (Exception ex)
             {
@@ -229,7 +267,6 @@
                 _modalText = ex.Message;
                 _isModalOpen = true;
             }
-            _paramFormValue = param.CurrentValue;
         }
     }
 
@@ -241,7 +278,7 @@
     {
         try
         {
-            _paramList.FirstOrDefault(p => p.Name == paramName)!.Save(_confPath, _paramFormValue);
+            _currentParameter!.Save(_confPath, _currentParameter.CurrentValue);
         }
         catch (Exception ex)
         {
@@ -254,8 +291,8 @@
     {
         try
         {
-            _paramList.FirstOrDefault(p => p.Name == paramName)!.RestoreToDefault(_confPath);
-            _paramFormValue = _paramList.FirstOrDefault(p => p.Name == paramName)!.DefaultValue;
+            _currentParameter!.RestoreToDefault(_confPath);
+            _currentParameter.CurrentValue = _currentParameter!.DefaultValue;
         }
         catch (Exception ex)
         {

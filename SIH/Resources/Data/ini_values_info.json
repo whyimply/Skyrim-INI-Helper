@@ -33,8 +33,13 @@
     "SourceFile": "skyrimprefs.ini",
     "ValueOptions": [
       {
-        "Value": "",
-        "Remark": "",
+        "Value": "0",
+        "Remark": "Рамка включена",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "Рамка отключена",
         "ScreenshotPath": ""
       }
     ]
