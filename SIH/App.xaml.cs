@@ -9,7 +9,7 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            var window = new Window(new MainPage()) { Title = "SIH - Skyrim INI Helper" };
+            var window = new Window(new MainPage()) { Title = "Skyrim INI Helper" };
 #if WINDOWS
             window.MinimumWidth = 800;
             window.MinimumHeight = 600;
