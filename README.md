@@ -1,1 +1,2 @@
-# SIH - Skyrim INI Helper. Программа для настройки графики Skyrim SE.
+# Skyrim INI Helper - Программа для настройки графики Skyrim SE.
+
