@@ -4,7 +4,6 @@
 @using CommunityToolkit.Maui.Storage
 
 @inject NavigationManager NavigationManager
-
 @inject ILocalStorageService LocalStorageService
 
 @if (!_isPathSelected )
@@ -118,7 +117,7 @@
                     <div id="footer" class="d-flex flex-column align-items-start p-1 gap-1 border-top" style="padding-bottom: 2px; width: min-content;">
                         <div class="d-flex flex-row text-center align-items-center pb-1 gap-1" style="width: stretch;">
                             <div>Значение: </div>
-                            <InputText @bind-Value=@_paramFormValue class="" style="flex:1;" />
+                            <InputText @bind-Value=@_paramFormValue class="" style="flex:1;" autocomplete="off" />
                         </div>
                    
                         <div class="d-flex flex-row align-items-center gap-1">
@@ -256,6 +255,7 @@
         try
         {
             _paramList.FirstOrDefault(p => p.Name == paramName)!.RestoreToDefault(_confPath);
+            _paramFormValue = _paramList.FirstOrDefault(p => p.Name == paramName)!.DefaultValue;
         }
         catch (Exception ex)
         {
