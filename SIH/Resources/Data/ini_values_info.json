@@ -331,13 +331,7 @@
     "DefaultValue": "3000.0000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "iShadowMapResolution",
@@ -538,13 +532,7 @@
     "DefaultValue": "0",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bVolumetricLightingEnable",
@@ -561,13 +549,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "iVolumetricLightingQuality",
@@ -584,13 +566,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fLightLODStartFade",
@@ -600,20 +576,14 @@
     "MySection": "Освещение",
     "Type": "float",
     "DescriptionSections": [
-      "Управляет расстоянием на котором игрок видит отбрасываемый от предметов (факела, лампы, костры) свет. Большие значение увеличивают расстояние, на котором игрок видит свет. Меньшие значение увеличивают производительность.",
+      "Управляет расстоянием на котором игрок видит отбрасываемый от объектов (факела, лампы, костры) свет. Большие значения увеличивают расстояние, на котором игрок видит свет, меньшие - увеличивают производительность.",
       "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
     ],
     "Warning": "",
     "DefaultValue": "1000.0000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bLensFlare",
@@ -630,13 +600,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -654,13 +618,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "iReflectionResolutionDivider",
@@ -677,13 +635,7 @@
     "DefaultValue": "2",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bUseWaterReflections",
@@ -700,13 +652,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -725,13 +671,7 @@
     "DefaultValue": "0",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bSAOEnable",
@@ -748,13 +688,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bUsePrecipitationOcclusion",
@@ -771,13 +705,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -795,13 +723,7 @@
     "DefaultValue": "750",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bForceCreateTarget",
@@ -818,13 +740,7 @@
     "DefaultValue": "0",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -842,13 +758,7 @@
     "DefaultValue": "0.8000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bDoDepthOfField",
@@ -865,13 +775,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -889,13 +793,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bUseWaterRefractions",
@@ -912,13 +810,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bUseWaterDepth",
@@ -935,13 +827,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -959,13 +845,7 @@
     "DefaultValue": "4600.0000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fLeafAnimDampenDistStart",
@@ -982,13 +862,7 @@
     "DefaultValue": "3600.0000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fTreeLoadDistance",
@@ -1005,13 +879,7 @@
     "DefaultValue": "25000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fMeshLODLevel1FadeTreeDistance",
@@ -1028,13 +896,7 @@
     "DefaultValue": "2844",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fMeshLODLevel2FadeTreeDistance",
@@ -1051,13 +913,7 @@
     "DefaultValue": "2048",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bRenderSkinnedTrees",
@@ -1074,13 +930,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "uiMaxSkinnedTreesToRender",
@@ -1097,13 +947,7 @@
     "DefaultValue": "40",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fTreesMidLODSwitchDist",
@@ -1120,13 +964,7 @@
     "DefaultValue": "3600.0000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -1144,13 +982,7 @@
     "DefaultValue": "35000.0000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fBlockLevel1Distance",
@@ -1167,13 +999,7 @@
     "DefaultValue": "70000.0000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fBlockMaximumDistance",
@@ -1190,13 +1016,7 @@
     "DefaultValue": "250000.0000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fSplitDistanceMult",
@@ -1213,13 +1033,7 @@
     "DefaultValue": "1.5000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -1237,13 +1051,7 @@
     "DefaultValue": "1.2000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fMeshLODFadeBoundDefault",
@@ -1260,13 +1068,7 @@
     "DefaultValue": "256.0000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fMeshLODLevel1FadeDist",
@@ -1283,13 +1085,7 @@
     "DefaultValue": "4096",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fMeshLODLevel2FadeDist",
@@ -1306,13 +1102,7 @@
     "DefaultValue": "3072",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fLODFadeOutMultObjects",
@@ -1329,13 +1119,7 @@
     "DefaultValue": "5",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -1354,13 +1138,7 @@
     "DefaultValue": "1.2000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fProjectedUVDiffuseNormalTilingScale",
@@ -1378,13 +1156,7 @@
     "DefaultValue": "0.2000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bEnableProjecteUVDiffuseNormals",
@@ -1401,13 +1173,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bToggleSparkles",
@@ -1424,13 +1190,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bEnableImprovedSnow",
@@ -1447,13 +1207,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -1471,13 +1225,7 @@
     "DefaultValue": "40",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -1495,13 +1243,7 @@
     "DefaultValue": "3",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -1519,13 +1261,7 @@
     "DefaultValue": "6",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -1543,13 +1279,7 @@
     "DefaultValue": "150000.0000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fLODFadeOutMultSkyCell",
@@ -1566,13 +1296,7 @@
     "DefaultValue": "1.0000",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
 
   {
@@ -1590,13 +1314,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "bAlwaysRunByDefault",
@@ -1613,13 +1331,7 @@
     "DefaultValue": "1",
     "CurrentValue": "",
     "SourceFile": "skyrimprefs.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   },
   {
     "Name": "fNearDistance",
@@ -1636,12 +1348,6 @@
     "DefaultValue": "15",
     "CurrentValue": "",
     "SourceFile": "skyrim.ini",
-    "ValueOptions": [
-      {
-        "Value": "",
-        "Remark": "",
-        "ScreenshotPath": ""
-      }
-    ]
+    "ValueOptions": []
   }
 ]
