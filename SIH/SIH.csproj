@@ -65,7 +65,6 @@
 
     <ItemGroup>
       <Folder Include="Resources\Data\pressets\" />
-      <Folder Include="wwwroot\images\bFull Screen\" />
     </ItemGroup>
 
     <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
