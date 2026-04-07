@@ -1,5 +1,63 @@
+:root {
+    --nav-link-text-boldness: 700;
+    --my-body-bg: #121212;
+    --my-secondary-bg: #212121;
+    --my-text-color: #d4d4d4;
+    --my-text-hover-color: #f0f0f0;
+}
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: var(--my-body-bg);
+    --bs-nav-link-color: var(--my-text-color);
+    --bs-nav-link-hover-color: var(--my-text-hover-color);
+    /*#292929*/
+}
+
 html, body {
+    height: 100%;
+    margin: 0;
     font-family: 'VerdanaRegular';
+    color: #d4d4d4 !important;
+    overflow: hidden;
+}
+
+#app {
+    min-height: 100vh; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 100px;
+}
+
+.container {
+    background-color: var(--my-secondary-bg);
+}
+
+.accordion {
+    --bs-accordion-color: var(--my-text-color);
+    --bs-accordion-btn-color: var(--my-text-color);
+    --bs-accordion-bg: var(--my-secondary-bg);
+    background-color: var(--my-secondary-bg);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--my-text-color);
+    background-color: var(--my-secondary-bg);
+}
+
+.bi::before {
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.bi:hover::before {
+    background-color: #101010;
+    cursor: pointer;
+}
+
+.my-secondary-bg {
+    background-color: var(--my-secondary-bg);
 }
 
 a, .btn-link {
@@ -82,20 +140,4 @@ h1:focus {
 
 .status-bar-safe-area {
     display: none;
-}
-
-@supports (-webkit-touch-callout: none) {
-    .status-bar-safe-area {
-        display: flex;
-        position: sticky;
-        top: 0;
-        height: env(safe-area-inset-top);
-        background-color: #f7f7f7;
-        width: 100%;
-        z-index: 1;
-    }
-
-    .flex-column, .navbar-brand {
-        padding-left: env(safe-area-inset-left);
-    }
 }

@@ -1,0 +1,1606 @@
+[
+  {
+    "Name": "bFull Screen",
+    "GlobalPosition": 1,
+    "Designation": "Режим экрана",
+    "Section": "Display",
+    "MySection": "Экран",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет режимом экрана. Включите для полноэкранного режима, отключите для оконного. В полноэкранном режиме, сворачивание игры занимает больше времени, поэтому если разрешение игры соответствует разрешению монитора, рекомендуется отключить.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bBorderless",
+    "GlobalPosition": 2,
+    "Designation": "Рамка окна",
+    "Section": "Display",
+    "MySection": "Экран",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет безрамочным режимом окна. Включите для скрытия рамки. Отключите для отображения.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "Рамка включена",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "Рамка отключена",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iSize W",
+    "GlobalPosition": 3,
+    "Designation": "Ширина экрана",
+    "Section": "Display",
+    "MySection": "Экран",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет шириной экрана.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1920",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "iSize H",
+    "GlobalPosition": 4,
+    "Designation": "Высота экрана",
+    "Section": "Display",
+    "MySection": "Экран",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет высотой экрана.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1080",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+
+  {
+    "Name": "bUse64bitsHDRRenderTarget",
+    "GlobalPosition": 5,
+    "Designation": "64 битный HDR рендер",
+    "Section": "Display",
+    "MySection": "Общее",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет 64-битным HDR рендером. Включение обеспечивает более точный метод рендеринга, обеспечивающий снижение артефактов и полос света. Рекомендуется включить.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "uGridsToLoad",
+    "GlobalPosition": 6,
+    "Designation": "Активные ячейки",
+    "Section": "General",
+    "MySection": "Общее",
+    "Type": "uint",
+    "DescriptionSections": [
+      "Управляет кол-вом активных ячеек, в которых отображаются полные модели ландшафта, деревеьев, объектов, воды, снега. Длина ячейки в игровых единицах =4096. Ячейки собираются в квадратную сетку вокруг персонажа. Значение данного параметра указывает размер сетки: при значении =5, будет построена сетка 5x5, итоговый размер сетки в игровых единицах: 20480x20480. Большие значения увеличивают размер сетки, меньшие - увеличивают производительность. Чётные значение будут округлены до нечётных в меньшую сторону. Значение меньше 5 будут приравнены к 5.",
+      "В ванильном Скайриме, данный параметр влияет на работу квестов и поведение персонажей. Это напрямую отражается на файле сохранения. Начав игру с одним значением, вы не сможете продолжить её с другим. Игра закроется на моменте загрузки. Увеличение значения влияет на стабильность игры. Для комфортного прохождения рекомендуется не повышать значение выше 9. Для увеличения качества изображения за пределами активных ячеек, рассмотрите возможность использования DynDOLOD.",
+      "В Skyrim Role Play не используется ванильная система сохранений, поэтому вы можете изменить значение в любой момент и продолжить игру. Однако это всё также влияет на стабильность, так как при увеличении сетки, движку приходится рендерить большее кол-во объектов. В теории, при больших вычислительных мощностях, увеличение параметра не так критично, однако это требует дополнительных тестов.",
+      "Формат значение - целое положительно число: 0, 1, 2, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "5",
+    "CurrentValue": "",
+    "SourceFile": "skyrim.ini",
+    "ValueOptions": [
+      {
+        "Value": "5",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "7",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "9",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "11",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "uLargeRefLODGridSize",
+    "GlobalPosition": 7,
+    "Designation": "Ячейки \"крупных\" объектов",
+    "Section": "General",
+    "MySection": "Общее",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет кол-вом ячеек в которых будут отрисованы полные модели \"крупных\" объектов. \"Крупные\" объекты - это объекты, которые игровой движок помечает как достаточно большие, чтобы отображать их полную модель за пределами активных ячеек, вместо LOD. Ячейки собираются в квадратную сетку вокруг персонажа. Значение данного параметра указывает размер сетки: при значении =5, будет построена сетка 5x5. Большие значения увеличивают размер сетки, меньшие - увеличивают производительность. Чётные значение будут округлены до нечётных в меньшую сторону. Значение меньшие Активных ячеек - \"uGridsToLoad\" не будут иметь эффекта так как внутри активных ячеек и так отображаются полные модели.\"",
+      "Формат значение - целое, положительное число: 0, 1, 2, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "9",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "5",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "7",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "9",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "11",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iMaxDecalsPerFrame",
+    "GlobalPosition": 8,
+    "Designation": "Эффекты на поверхностях",
+    "Section": "Display",
+    "MySection": "Общее",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет количеством отображаемых эффектов на поверхностях за кадр: пятна крови, следы от боевой магии и тд. Большие значения увеличивают кол-во эффектов за кадр, меньшие - увеличивают производительность. 0 - полностью отключает эффекты. Рекомендуется установить 250.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "10",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "250",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iMaxSkinDecalsPerFrame",
+    "GlobalPosition": 9,
+    "Designation": "Эффекты на персонажах",
+    "Section": "Display",
+    "MySection": "Общее",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет количеством эффектов на персонажах за кадр. Например кровь на игроке или нпс. Рекомендуется установить 100.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "3",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+
+  {
+    "Name": "bUseTAA",
+    "GlobalPosition": 10,
+    "Designation": "Сглаживание TAA",
+    "Section": "Display",
+    "MySection": "Сглаживание",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет сглаживанием TAA. Включение уменьшает кол-во рваных краёв (лесенок) и мерцание объектов. Хотя эта техника может значительно улучшить внешний вид, она создаёт заметное сглаживание изображения, что некоторым может показаться раздражающим. Отключение увеличивает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bFXAAEnabled",
+    "GlobalPosition": 11,
+    "Designation": "Сглаживание FXAA",
+    "Section": "Display",
+    "MySection": "Сглаживание",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет сглаживанием FXAA. Включение уменьшает кол-во рваных краёв (лесенок) у предметов и объектов. Однако, в качестве побочного эффекта, ко всему применяется небольшое размытие. Отключение увеличивает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+
+  {
+    "Name": "fShadowDistance",
+    "GlobalPosition": 12,
+    "Designation": "Дальность прорисовки теней",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит тени, отбрасываемые от объектов, персонажей, предметов, деревьев и ландшафта. Большие значения увеличивают расстояние, на котором игрок видит тени, меньшие - увеличивают производительность. Параметр управляет тенями полных моделей внутри \"Активных ячеек\" (uGridsToLoad) и \"Ячеек крупных объектов\" (uLargeRefLODGridSize), поэтому увеличение параметра выше чем расстояние от персонажа до границы сетки (4096 * (размер сетки / 2)) не имеет смысла и может вызвать значительное ухудшение качества теней. Увеличение этого параметра также приводит к снижению разрешения теней, так как карта теней растягивается на это расстояние. Это можно компенсировать увеличением параметра \"Разрешение теней\" (iShadowMapResolution).",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "8000.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "5120",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "10240",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "102400",
+        "Remark": "Огромное значение вызывает значительное ухудшение качества теней.",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fInteriorShadowDistance",
+    "GlobalPosition": 13,
+    "Designation": "Дальность прорисовки теней в помещении",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит отбрасываемые от объектов тени внутри помещений. Там где нет теней, место помещается в вечную тень, что уменьшает освещение внутри помещений.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ...",
+      "Рекомендуется оставить значение по умолчанию."
+    ],
+    "Warning": "",
+    "DefaultValue": "3000.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "iShadowMapResolution",
+    "GlobalPosition": 14,
+    "Designation": "Разрешение теней",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет разрешением теней. Большие значение увеличивают качество теней, меньшие - увеличивают производительность. Если установлено =0 или меньше, вся область в пределах дистанции прорисовки теней (fShadowDistance или fInterorShadowDistance) будет покрыта глобальной тенью. Значение 1 даёт лучшую производительность, но выглядит ужасно, если не использовать его в сочетании с другими настройками для эффективного отключения теней. Значения, не являющиеся разрешением текстур, создают мерцающие тени (например: 1000 мерцает, а 1024 — нет). Установка значений больших 4096, может вызвать значительное падение производительности.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "2048",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "2048",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "4096",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "8192",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "16384",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iNumFocusShadow",
+    "GlobalPosition": 15,
+    "Designation": "Количество фокусных теней",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет количеством фокусных теней, то есть теней, которые игровой движок рендерит с повышенным качеством. Большие значения увеличивают кол-во объектов, которые получают фокусные тени, меньшие - увеличивают производительность.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "4",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "ffocusShadowMapDoubleEveryXUnit",
+    "GlobalPosition": 16,
+    "Designation": "Дальность прорисовки фокусных теней",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием, на котором тень может стать фокусной. Большие значения увеличивают расстояние, на котором игрок видит фокусные тени, меньшие - увеличивают производительность.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "450.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bTreesReceiveShadows",
+    "GlobalPosition": 17,
+    "Designation": "Собственная тень деревьев",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет возможностью деревьев отбрасывать тени на себя (Например тень от ствола сможет отрисоваться на ветках). Значение 0 - повышает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bDrawLandShadows",
+    "GlobalPosition": 18,
+    "Designation": "Отрисовка теней ландшафта",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет возможностью наземных объектов, таких как скалы и горы, отбрасывать тени. Отключение - повышает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iNumSplits",
+    "GlobalPosition": 19,
+    "Designation": "Количество сегментов теней",
+    "Section": "Display",
+    "MySection": "Тени",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет количеством сегментов, на которые делится карта теней. Большие значения увеличивают качество теней при удалении от персонажа, меньшие - увеличивают производительность. Допустимые значения 2 или 3.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "2",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "2",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "3",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+
+  {
+    "Name": "bIndEnable",
+    "GlobalPosition": 20,
+    "Designation": "Косвенное освещение",
+    "Section": "Display",
+    "MySection": "Освещение",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет переключением косвенного вида освещения. На форумах указано что данный параметр глючный и крайне снижает производительность без заметного изменения окружения. При тестах не было замечено ничего необычного, однако влияние действительно минимальное. Параметр даёт эффект только при отключенном объемном освещении \"bVolumetricLightingEnable\" и включённой Окклюзии экранного пространства - \"bSAOEnable\".",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bIBLFEnable",
+    "GlobalPosition": 21,
+    "Designation": "Горизонтальный блик линзы",
+    "Section": "Display",
+    "MySection": "Освещение",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет эффектом горизонтального блика на огне, свечах и заклинаниях.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bVolumetricLightingEnable",
+    "GlobalPosition": 22,
+    "Designation": "Объемное освещение",
+    "Section": "Display",
+    "MySection": "Освещение",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет эффектом солнечный лучей, объёмного света, тумана и дымки. Отключение увеличивает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "iVolumetricLightingQuality",
+    "GlobalPosition": 23,
+    "Designation": "Качество объёмного освещения",
+    "Section": "Display",
+    "MySection": "Освещение",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет качеством объёмного освещения. 0 — низко. 1 — средне. 2 — высоко. 3 — ультра.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fLightLODStartFade",
+    "GlobalPosition": 24,
+    "Designation": "Дальность затухания источников света",
+    "Section": "Display",
+    "MySection": "Освещение",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит отбрасываемый от объектов (факела, лампы, костры) свет. Большие значения увеличивают расстояние, на котором игрок видит свет, меньшие - увеличивают производительность. Это применимо не ко всем источникам света. Свет отбрасывается только от полных 3D моделей, поэтому увеличение параметра выше чем расстояние от персонажа до границы сетки Активных ячеек \"uGridsToLoad\" (4096 * (кол-во ячеек / 2)) не имеет смысла.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1000.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bLensFlare",
+    "GlobalPosition": 25,
+    "Designation": "Блики от солнца",
+    "Section": "Imagespace",
+    "MySection": "Освещение",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет возможностью камеры создавать эффект блика объектива от солнца.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+
+  {
+    "Name": "bScreenSpaceReflectionEnabled",
+    "GlobalPosition": 26,
+    "Designation": "Отражения в экранном пространстве",
+    "Section": "Display",
+    "MySection": "Отражение",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет отражениями на поверхностях металлических объектов, воде и тд. При включении водные модификации могут вызывают странные эффекты. Отключение увеличивает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "iReflectionResolutionDivider",
+    "GlobalPosition": 27,
+    "Designation": "Разрешение отражений",
+    "Section": "Display",
+    "MySection": "Отражение",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет разрешением отражений. Работает как обратный коэфициент, большие значения уменьшают итоговое разрешение отражённых объектов и увеличивают производительность. Меньшие значения увеличивают качество. 0 - вызывает краш игры, так как на 0 делить нельзя.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "2",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bUseWaterReflections",
+    "GlobalPosition": 28,
+    "Designation": "Отражения на воде",
+    "Section": "Water",
+    "MySection": "Отражение",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет отражением воды, но похоже, отключение параметра вызывает глюки. Рекомендуется включить его.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+
+  {
+    "Name": "bSAO_CS_Enable",
+    "GlobalPosition": 29,
+    "Designation": "Окружающая окклюзия",
+    "Section": "Display",
+    "MySection": "Окклюзия",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет переключением окружающей окклюзии. На форумах указано что праметр глючной, однако при тестах не было замечено аномалий. Заметного измения картинки также не замечено.",
+      "Формат значение - включено/отключено: (1 или 0)",
+      "Не используется при bSAOEnable=0"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bSAOEnable",
+    "GlobalPosition": 30,
+    "Designation": "Окклюзии экранного пространства",
+    "Section": "Display",
+    "MySection": "Окклюзия",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет переключением использования окружающей окклюзии экранного пространства (SSAO). Включение добавляет эффект затенения в углублениях и местах соприкосновения объектов. Отключение увеличивает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bUsePrecipitationOcclusion",
+    "GlobalPosition": 31,
+    "Designation": "Окклюзия оссадков",
+    "Section": "Display",
+    "MySection": "Окклюзия",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет окклюзией оссадков. Снег и дождь не будут видны под крышами, выступами и тд. Отключение увеличивает производительность.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+
+  {
+    "Name": "iMaxDesired",
+    "GlobalPosition": 32,
+    "Designation": "Частицы эффектов",
+    "Section": "Particles",
+    "MySection": "Эффекты",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет количеством частиц, «желательных» для отрисовки. Это влияет на дым, искры, брызги крови, свет и подобные эффекты. Если установлено в 0, чаще всего частицы не видны, но иногда они «вспыхивают», отсюда и «желаемые». Очень высокие значения могут привести к тому, что некоторые ветреные снежные бури становятся слишком сильными. Меньшие значение увеличивают производительность.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "750",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "10",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "100",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1000",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bForceCreateTarget",
+    "GlobalPosition": 33,
+    "Designation": "Буферы пост-эффектов",
+    "Section": "Display",
+    "MySection": "Эффекты",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет возможностью переиспользовать буферы пост‑эффектов. Включение разрешает переиспользовать подходящие буферы, что повышает производительность. Отключение заставляет каждый раз пересоздавать буфер, что уменьшает кол-во аномалий.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "0",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+
+  {
+    "Name": "fDynamicDOFBlurMultiplier",
+    "GlobalPosition": 34,
+    "Designation": "Множитель динамического размытия",
+    "Section": "Display",
+    "MySection": "Размытие",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет множителем динамического размытия фона и объектов вне фокуса камеры. 0.0 — полностью отключает размытие, даже если Глубина резкости \"fDynamicDOFBlurMultiplier\" активна.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "0.8000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "2",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bDoDepthOfField",
+    "GlobalPosition": 35,
+    "Designation": "Глубина резкости",
+    "Section": "Imagespace",
+    "MySection": "Размытие",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет возможностью камеры имитировать работу человеческого глаза: размывать фон и объекты не в фокусе, а также делает окружение мутным под водой.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+
+  {
+    "Name": "bUseWaterDisplacements",
+    "GlobalPosition": 36,
+    "Designation": "Движение воды",
+    "Section": "Water",
+    "MySection": "Вода",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет движением/рябью воды (например, водный след за вами, когда вы проходите через неё). Рекомендуется включить его.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bUseWaterRefractions",
+    "GlobalPosition": 37,
+    "Designation": "Преломление света на воде",
+    "Section": "Water",
+    "MySection": "Вода",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет преломлением света на воде. Рекомендуется оставить по умолчанию.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bUseWaterDepth",
+    "GlobalPosition": 38,
+    "Designation": "Глубина воды",
+    "Section": "Water",
+    "MySection": "Вода",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет визуальными эффектами глубины воды. Рекомендуется оставить по умолчанию.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+
+  {
+    "Name": "fTreeLoadDistance",
+    "GlobalPosition": 57,
+    "Designation": "Дальность прорисовки LOD деревьев",
+    "Section": "TerrainManager",
+    "MySection": "Деревья",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит низкополигональные LOD-модели деревьев всех уровней. Большие значения увеличивают дистанцию, на которых видны LOD модели, меньшие увеличивают производительность.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "25000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "10240",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "102400",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1024000",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fLeafAnimDampenDistEnd",
+    "GlobalPosition": 39,
+    "Designation": "Дальняя граница затухания анимации деревьев",
+    "Section": "Display",
+    "MySection": "Деревья",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием, на котором игрок видит анимацию листвы и веток деревьев. Большие значения увеличивают расстояние. Меньшие значения увеличивают производительность. Это работает только для полных моделей деревьев, поэтому увеличение параметра выше чем расстояние от персонажа до границы сетки Активных ячеек \"uGridsToLoad\" (4096 * (кол-во ячеек / 2)) не имеет смысла. Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "4600.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fLeafAnimDampenDistStart",
+    "GlobalPosition": 40,
+    "Designation": "Ближняя граница затухания анимации деревьев",
+    "Section": "Display",
+    "MySection": "Деревья",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием, на котором игрок видит ослабленную анимацию листвы и веток деревьев. Большие значения увеличивают расстояние. Меньшие значения увеличивают производительность. Значения больше чем fLeafAnimDampenDistEnd обрезаются до его значения. Это работает только для полных моделей деревьев, поэтому увеличение параметра выше чем расстояние от персонажа до границы сетки Активных ячеек \"uGridsToLoad\" (4096 * (кол-во ячеек / 2)) не имеет смысла. Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "3600.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fMeshLODLevel1FadeTreeDistance",
+    "GlobalPosition": 30,
+    "Designation": "Затухание детализации деревьев 1",
+    "Section": "Display",
+    "MySection": "Деревья",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит полные 3D‑модели деревьев. Все меши деревьев за пределами этого расстояния заменяются на низкополигональные LOD-модели 1 уровня. Чем выше уровень LOD тем меньше полигонов и хуже выглядит модель. Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "2844",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fMeshLODLevel2FadeTreeDistance",
+    "GlobalPosition": 31,
+    "Designation": "Затухание детализации деревьев 2",
+    "Section": "Display",
+    "MySection": "Деревья",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит низкополигональные LOD-модели деревьев 1 уровня. Все меши деревьев за пределами этого расстояния заменяются на низкополигональные LOD-модели 2 уровня. Чем выше уровень LOD тем меньше полигонов и хуже выглядит модель. Значения меньше чем fMeshLODLevel1FadeTreeDistance будут обрезаны до его значения. Большие значения увеличивают кол-во низкополигональные LOD-моделей деревьев 1 уровня. Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "2048",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bRenderSkinnedTrees",
+    "GlobalPosition": 62,
+    "Designation": "Улучшенные деревья",
+    "Section": "Trees",
+    "MySection": "Деревья",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет улучшенной отрисовкой деревьев. Включение позволяет игре рендерить более красивые, пушистые деревья. Рекомендуется оставить по умолчанию.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bEnableTrees",
+    "GlobalPosition": 62,
+    "Designation": "Разрешить деревья",
+    "Section": "Trees",
+    "MySection": "Деревья",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Рекомендуется оставить по умолчанию.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrim.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bEnableTreeAnimations",
+    "GlobalPosition": 62,
+    "Designation": "Анимация деревьев",
+    "Section": "Trees",
+    "MySection": "Деревья",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Рекомендуется оставить по умолчанию.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrim.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fUpdateBudget",
+    "GlobalPosition": 62,
+    "Designation": "Буффер анимаций",
+    "Section": "Trees",
+    "MySection": "Деревья",
+    "Type": "float",
+    "DescriptionSections": [
+      "Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1.5",
+    "CurrentValue": "",
+    "SourceFile": "skyrim.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "uiMaxSkinnedTreesToRender",
+    "GlobalPosition": 63,
+    "Designation": "Количество улучшенных деревьев",
+    "Section": "Trees",
+    "MySection": "Деревья",
+    "Type": "uint",
+    "DescriptionSections": [
+      "Управляет количеством улучшенных деревьев вокруг игрока. Рекомендуется оставить по умолчанию.",
+      "Формат значение - целое, положительное число: (0, 1, 2, ...)"
+    ],
+    "Warning": "",
+    "DefaultValue": "40",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fTreesMidLODSwitchDist",
+    "GlobalPosition": 41,
+    "Designation": "Дистанция улучшенных деревьев",
+    "Section": "Display",
+    "MySection": "Деревья",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием, на котором игрок видит более красивые, улучшенные деревья. Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "3600.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+
+  {
+    "Name": "fBlockMaximumDistance",
+    "GlobalPosition": 60,
+    "Designation": "Дальность прорисовки ландшафта (MAX уровень)",
+    "Section": "TerrainManager",
+    "MySection": "Ландшафт",
+    "Type": "float",
+    "DescriptionSections": [
+      "",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "250000.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "200000",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "999999",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "fSplitDistanceMult",
+    "GlobalPosition": 61,
+    "Designation": "Множитель дальности прорисовки",
+    "Section": "TerrainManager",
+    "MySection": "Ландшафт",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет множителем расстояния для уровней ландшафтного LOD. Рекомендуется установить =1.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1.5000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+
+  {
+    "Name": "fMeshLODFadePercentDefault",
+    "GlobalPosition": 28,
+    "Designation": "Затухание детализации (Длительность)",
+    "Section": "Display",
+    "MySection": "Объекты",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором будет плавный переход между низкополигональными LOD‑моделями и полноразмерными 3D‑моделями объектов (ветки, камни, кусты, сундуки, лестницы и тд.). Параметр является коэфициентом, поэтому итоговое расстояние перехода моделей рассчитывается как fMeshLODFadePercentDefault * fMeshLODFadeBoundDefault. Значения большие 1.0 обеспечивают более длительный переход моделей, меньшие более резкий, при значении 0 будет видна точная граница перехода моделей. Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1.2000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fMeshLODFadeBoundDefault",
+    "GlobalPosition": 29,
+    "Designation": "Затухание детализации (Начало)",
+    "Section": "Display",
+    "MySection": "Объекты",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором начнётся плавный переход между низкополигональными LOD‑моделями и полноразмерными 3D‑моделями объектов (ветки, камни, кусты, сундуки, лестницы и тд.). Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "256.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fMeshLODLevel1FadeDist",
+    "GlobalPosition": 32,
+    "Designation": "Затухание детализации объектов (1 уровень)",
+    "Section": "Display",
+    "MySection": "Объекты",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит полные 3D‑модели объектов. Все меши объектов за пределами этого расстояния заменяются на низкополигональные LOD-модели 1 уровня. Чем выше уровень LOD тем меньше полигонов и хуже выглядит модель. Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "4096",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fMeshLODLevel2FadeDist",
+    "GlobalPosition": 33,
+    "Designation": "Затухание детализации объектов (2 уровень)",
+    "Section": "Display",
+    "MySection": "Объекты",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит низкополигональные LOD-модели объектов 1 уровня. Все меши объектов за пределами этого расстояния заменяются на низкополигональные LOD-модели 2 уровня. Чем выше уровень LOD тем меньше полигонов и хуже выглядит модель. Значения меньшие чем fMeshLODLevel1FadeDist будут обрезаны до его значения. Большие значения увеличивают кол-во низкополигональные LOD-моделей объектов 1 уровня. Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "3072",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fLODFadeOutMultObjects",
+    "GlobalPosition": 66,
+    "Designation": "Дистанция прорисовки объектов",
+    "Section": "LOD",
+    "MySection": "Объекты",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием, на котором игрок видит объекты. Это относится к камням, кустам, лежачим деревьям, и прочим мелким объектам, а также к \"крупными\" объектам и как не странно к полным 3D-моделям деревьев. Большие значения увеличивают дальность отображения, меньшие - повышают производительность. Параметр управляет объектами в сетке Активных ячеек (uGridsToLoad) и Ячеек крупных объектов (uLargeRefLODGridSize), поэтому увеличение параметра выше чем расстояние от персонажа до границы наибольшей сетки (~3 * (размер сетки / 2)) не имеет смысла. Параметр представляет собой коэфициент для некоторого базового значения. Установка =0 даст максимальную прорисовку объектов. Для наименьшей прорисовки выставляйте значения в пределах от 0 до 1, например 0.1.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "5",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "0.1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "3",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "12",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+
+  {
+    "Name": "fProjectedUVNormalDetailTilingScale",
+    "GlobalPosition": 9,
+    "Designation": "Масштаб детализированной плитки UV проекции",
+    "Section": "Display",
+    "MySection": "Снег",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет частотой повторения детализированной плитки UV проекции, которую движок накладывает поверх текстур, использующих Projected UV. В основном используется для снега на поверхностях, льда и некоторых эффектов наложения. Большие значения увеличивают детализированность снега. Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ...",
+      "Не используется, если bEnableProjecteUVDiffuseNormals=0"
+    ],
+    "Warning": "",
+    "DefaultValue": "1.2000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fProjectedUVDiffuseNormalTilingScale",
+    "GlobalPosition": 10,
+    "Designation": "Масштаб детализации диффузных нормалей в шейдере UV проекции",
+    "Section": "Display",
+    "MySection": "Снег",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет масштабом диффузных нормалей в шейдере UV проекции. Влияет на то, как выглядит освещение и контраст на снегу и льду. Большие значения повышают контрастность снега. Рекомендуется оставить по умолчанию.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ...",
+      "Не используется, если bEnableProjecteUVDiffuseNormals=0"
+    ],
+    "Warning": "",
+    "DefaultValue": "0.2000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bEnableProjecteUVDiffuseNormals",
+    "GlobalPosition": 11,
+    "Designation": "Использование проецируемых UV-диффузных нормалей",
+    "Section": "Display",
+    "MySection": "Снег",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет переключением использования проецируемых UV-диффузных нормалей на текстурах. Влияет на яркость снега.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bToggleSparkles",
+    "GlobalPosition": 16,
+    "Designation": "Блёстящий снег",
+    "Section": "Display",
+    "MySection": "Снег",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет переключением искр на снегу. Это оссобенно заметно на деревьях покрытых снегом.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+  {
+    "Name": "bEnableImprovedSnow",
+    "GlobalPosition": 22,
+    "Designation": "Улучшенный снег",
+    "Section": "Display",
+    "MySection": "Снег",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет эффектом улучшенного снежного шейдера. Рекомендуется отключить.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+
+  {
+    "Name": "fGrassStartFadeDistance",
+    "GlobalPosition": 64,
+    "Designation": "Дальность прорисовки травы",
+    "Section": "Grass",
+    "MySection": "Трава",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит траву. Большие значения увеличивают дальность отображения, меньшие - повышают производительность. Трава не имеет LOD модели, поэтому увеличение параметра выше чем расстояние от персонажа до границы сетки Активных ячеек \"uGridsToLoad\" (4096 * (кол-во ячеек / 2) не имеет смысла.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "3500",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "5120",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "10240",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+
+  {
+    "Name": "fLODFadeOutMultItems",
+    "GlobalPosition": 67,
+    "Designation": "Дистанция прорисовки предметов.",
+    "Section": "LOD",
+    "MySection": "Предметы",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием, на котором игрок видит предметы. Большие значения увеличивают дальность отображения, меньшие - повышают производительность. Предметы не имеют LOD модели, поэтому увеличение параметра выше чем расстояние от персонажа до границы сетки Активных ячеек \"uGridsToLoad\" (≈12) не имеет смысла. Параметр представляет собой коэфициент для некоторого базового значения. Установка =0 даст максимальную прорисовку предметов. Для наименьшей прорисовки выставляйте значения в пределах от 0 до 1, например 0.1.",
+      "При тестировании параметра ни один кусок сыра не пострадал.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "3",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "0.1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "3",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "12",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+
+  {
+    "Name": "fLODFadeOutMultActors",
+    "GlobalPosition": 68,
+    "Designation": "Дистанция прорисовки персонажей",
+    "Section": "LOD",
+    "MySection": "Персонажи",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием, на котором игрок видит персонажей. Под персонажами имеется ввиду всё, что имеет интеллект (AI). Большие значения увеличивают дальность отображения, меньшие - повышают производительность. Персонажи не имеют LOD модели, поэтому увеличение параметра выше чем расстояние от персонажа до границы сетки Активных ячеек \"uGridsToLoad\" (≈12) не имеет смысла. Параметр представляет собой коэфициент для некоторого базового значения. Установка =0 даст максимальную прорисовку персонажей. Для наименьшей прорисовки выставляйте значения в пределах от 0 до 1, например 0.1.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "6",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "0.1",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "3",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "12",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+
+  {
+    "Name": "fSkyCellRefFadeDistance",
+    "GlobalPosition": 48,
+    "Designation": "Небесные объекты",
+    "Section": "MAIN",
+    "MySection": "Облака",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием на котором игрок видит объекты в небесных ячейках. Особенно это заметно при отображении облаков на склонах удалённых гор. Большие значения увеличиваю дистанцию прорисовки объектов, меньшие - увеличивают производительность.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "150000.0000",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": [
+      {
+        "Value": "0",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "200000",
+        "Remark": "",
+        "ScreenshotPath": ""
+      },
+      {
+        "Value": "600000",
+        "Remark": "",
+        "ScreenshotPath": ""
+      }
+    ]
+  },
+
+  {
+    "Name": "iVSyncPresentInterval",
+    "GlobalPosition": 44,
+    "Designation": "Вертикальная синхронизация",
+    "Section": "Display",
+    "MySection": "Прочее",
+    "Type": "int",
+    "DescriptionSections": [
+      "Управляет вертикальной синхронизацией. 1 - включить, 0 - выключить.",
+      "Формат значение - целое число: ..., -1, 0, 1, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "bAlwaysRunByDefault",
+    "GlobalPosition": 51,
+    "Designation": "Режим передвижения",
+    "Section": "Controls",
+    "MySection": "Прочее",
+    "Type": "bool",
+    "DescriptionSections": [
+      "Управляет режимом передвижения игрока по умолчанию (при запуске игры). Отключите для ходьбы по умолчанию. Включите для бега.",
+      "Формат значение - включено/отключено: (1 или 0)"
+    ],
+    "Warning": "",
+    "DefaultValue": "1",
+    "CurrentValue": "",
+    "SourceFile": "skyrimprefs.ini",
+    "ValueOptions": []
+  },
+  {
+    "Name": "fNearDistance",
+    "GlobalPosition": 71,
+    "Designation": "Дистанция обрезки геометрии",
+    "Section": "Display",
+    "MySection": "Прочее",
+    "Type": "float",
+    "DescriptionSections": [
+      "Управляет расстоянием ближней плоскости камеры для уменьшения графических артефактов из-за Z-Fighting. Большие значения уменьшают Z-Fighting, что уменьшает мерцание текстур вдали, но вызывают видимую обрезку геометрии рядом с камерой (⪆20). В оссобенности это заметно при игре от 1 лица. При установке в 0, будет обрезана вся геометрия, вы будете видеть чёреый экран.",
+      "Формат значение - число с плавающей точкой: ..., -0.0001, 0, 0.0001, ..."
+    ],
+    "Warning": "",
+    "DefaultValue": "15",
+    "CurrentValue": "",
+    "SourceFile": "skyrim.ini",
+    "ValueOptions": []
+  }
+]

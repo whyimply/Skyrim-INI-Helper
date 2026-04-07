@@ -1,7 +1,313 @@
-﻿@page "/parameters"
+﻿@page "/parameters/{paramName?}"
 
-<h3>ParamPage</h3>
+@using System.Text.Json
+@using CommunityToolkit.Maui.Storage
+
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService LocalStorageService
+
+@if (!_isPathSelected )
+{
+    <div class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Укажите путь к конфигурации</h5>
+                </div>
+
+                <div class="modal-body d-flex">
+                    <InputText id="folderPath" class="folder-path" style="flex:1;" @bind-Value="_confPath" readonly @onclick="PickFolderAsync" />
+
+                </div>
+                
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" @onclick=@SetFolderPath>Продолжить</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Backdrop -->
+    <div class="modal-backdrop fade show"></div>
+}
+
+@if (_isModalOpen)
+{
+    <div class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Ошибка в конфигурации</h5>
+                    <button type="button" class="btn-close" @onclick=@(()=>{ _isModalOpen = false; } )></button>
+                </div>
+
+                <div class="modal-body">
+                    @_modalText
+                </div>
+                
+                <div class="modal-body">
+                    Исправьте ошибку и повторите попытку.
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" @onclick=@(() => { _isModalOpen = false; } )>ОК</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Backdrop -->
+    <div class="modal-backdrop fade show"></div>
+}
+
+@if (_isParamGaleryOpen)
+{
+    
+    <div  class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="d-flex flex-column align-items-center justify-content-between vh-100 vw-100">
+            <div class="position-relative d-flex mt-2" style="width: 70vw; height: auto;">
+                <img class="rounded" style="max-width: 100%;" src="/images/@(_currentParameter!.Name)/@(_currentParameter!.Name)=@(_targetGaleryImageValue).png" alt="...">
+                <div class="position-absolute btn btn-close rounded " style="right: 15px; top: 15px; background-color: white;" @onclick=@(() => { _isParamGaleryOpen = false; })></div>
+            </div>
+
+            <div class="d-flex align-content-center justify-content-center gap-3 mb-4" style="max-width: 15vw; height: auto;">
+                @for (int i = 0; i < _currentParameter!.ValueOptions.Length; i++)
+                {
+                    int k = i;
+                    <div class="d-flex align-content-between" style=" @(_currentParameter!.ValueOptions[i].Value == _targetGaleryImageValue ? "border: solid 1px orange;" : "")">
+                        <div class="card rounded-0">
+                            <img style="cursor: pointer; max-height: 10vh;" src="/images/@(_currentParameter!.Name)/@(_currentParameter!.Name)=@(_currentParameter!.ValueOptions[i].Value).png" alt="..." @onclick=@(() => { _targetGaleryImageValue = _currentParameter!.ValueOptions[k].Value; })>
+                                <div class="card-body p-0">
+                                <p class="card-text">=@_currentParameter!.ValueOptions[i].Value</p>
+                            </div>
+                        </div>
+                    </div>                                      
+                }               
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Backdrop -->
+    <div  class="modal-backdrop fade show"></div>
+}
+
+
+<div class="d-flex flex-row mh-100 gap-1" style="min-height: 0; flex: 1; margin-bottom: 5px; margin-top: 5px;">
+    <aside class="d-flex flex-column overflow-auto mh-100 my-secondary-bg rounded-start-2" style="max-width: 350px; min-width: 350px; flex: 1; scrollbar-gutter: stable; margin-left: 5px;">
+        <div class="accordion accordion-flush" id="accordionExample">
+
+            @for (int i = 0; i < _mySectionList.Count; i++)
+            {
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed shadow-none" style="padding: 12px;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_@i" aria-expanded="true" aria-controls="collapse_@i">
+                            @_mySectionList[i]
+                        </button>
+                    </h2>
+                    <div id="collapse_@i" class="accordion-collapse collapse">
+                        <div class="accordion-body p-2">
+                            <ul class="d-flex flex-column p-0 m-0" style="list-style-type: none;">
+                                @foreach (var param in _paramList.FindAll(p => p.MySection == _mySectionList[i]))
+                                {
+                                    <NavLink style="color: #d4d4d4; text-decoration:none;" href=@($"parameters/{param.Name}") Match="NavLinkMatch.All">
+                                        <li class="@(paramName == param.Name ? "active" : "")">@param.Designation</li>
+                                    </NavLink>                               
+                                }                                                   
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </aside>
+
+    <main class="d-flex flex-column my-secondary-bg rounded-end-2 overflow-hidden" style="flex: 1; margin-right: 5px; position: relative;">
+        @if (paramName is not null && _currentParameter is not null)
+        {
+            <div id="header" class="d-flex flex-row align-items-center border-bottom p-2" style="margin-left: 4px; margin-right: 4px; padding-bottom: 2px;">
+                <i class="bi bi-arrow-left" style="font-size: 2rem; color: white;" hidden></i>
+                <div class="flex-grow-1" style="margin-left: 5px;">
+                    @($"{_currentParameter!.Designation} - \"{_currentParameter!.Name}\"")
+                </div>
+                <i class="bi bi-arrow-right" style="font-size: 2rem; color: white;" hidden></i>
+            </div>
+            <div id="paramData" class="d-flex flex-row overflow-auto" style="flex: 1;">
+                <div id="paramData-desc" class="card m-1 p-1 justify-content-between" style="width: min-content; font-size: 15px;">
+                    <div style="width: fit-content; overflow:auto;">
+                        @for (int i = 0; i < _currentParameter!.DescriptionSections.Length; i++)
+                        {
+                            @_currentParameter!.DescriptionSections[i]<br><br>
+                        }
+                        <div>По умолчанию: @_currentParameter!.DefaultValue</div>
+                    </div>                 
+
+                    <div id="footer" class="d-flex flex-column align-items-start p-1 gap-1 border-top" style="padding-bottom: 2px; width: min-content;">
+                        <div class="d-flex flex-row text-center align-items-center pb-1 gap-1" style="width: stretch;">
+                            <div>Значение: </div>
+                            <InputText @bind-Value=@_currentParameter.CurrentValue class="" style="flex:1;" autocomplete="off" />
+                        </div>
+                   
+                        <div class="d-flex flex-row align-items-center gap-1">
+                            <div class="btn btn-success" @onclick=@SaveParameter> ПРИМЕНИТЬ</div>
+                            <div class="btn btn-danger" @onclick=@RestoreParameter> ВОССТАНОВИТЬ</div>
+                        </div>
+                    </div>
+                </div>
+                                      
+                <div id="paramData-screen" class="p-1" style="flex: 1; overflow-x:hidden; width: min-content;">
+                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                        @for (int i = 0; i < _currentParameter!.ValueOptions.Length; i++)
+                        {
+                            int k = i;
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="/images/@(_currentParameter!.Name)/@(_currentParameter!.Name)=@(_currentParameter!.ValueOptions[i].Value).png" class="card-img-top" alt="..." style="cursor:pointer;" @onclick=@(() => { _isParamGaleryOpen = true; _targetGaleryImageValue = _currentParameter!.ValueOptions[k].Value; } )>
+                                    <div class="card-body">
+                                        <h6 class="card-title">@(_currentParameter!.Name)=@(_currentParameter!.ValueOptions[i].Value)</h6>
+                                        <p class="card-text">@(_currentParameter!.ValueOptions[i].Remark)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }                       
+                        
+                    </div>
+
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="position-absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                Выберите параметр
+            </div>
+        }
+
+        
+    </main>
+    
+</div>
 
 @code {
+    [Parameter]
+    public string? paramName { get; set; }
 
+    private Parameter? _currentParameter;
+
+    private List<string> _mySectionList = [];
+    private List<Parameter> _paramList = [];
+
+    private bool _isPathSelected = false;
+    private string _confPath = "";
+
+    private bool _isModalOpen = false;
+    private string _modalText = "";
+
+    private const string _confPathKey = "confPath";
+
+    private bool _isParamGaleryOpen = false;
+
+    private string _targetGaleryImageValue = "";
+
+
+    private async Task PickFolderAsync()
+    {       
+        try
+        {
+            var result = await FolderPicker.Default.PickAsync(CancellationToken.None);
+
+            if (result.IsSuccessful && result.Folder is not null)
+            {
+                _confPath = result.Folder.Path;
+            }           
+        }
+        catch (Exception ex)
+        {
+            _modalText = ex.Message;
+            _isModalOpen = true;
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var stream = await FileSystem.OpenAppPackageFileAsync("Resources/Data/ini_values_info.json");
+
+        using var reader = new StreamReader(stream);
+        var json = await reader.ReadToEndAsync();
+
+        _paramList = JsonSerializer.Deserialize<List<Parameter>>(json)!;
+
+        foreach (var param in _paramList)
+        {
+            if (_mySectionList.Exists(p => p == param.MySection) is false)
+            {
+                _mySectionList.Add(param.MySection);
+            }
+        }
+
+        _confPath = await LocalStorageService.GetItemAsync<string>(_confPathKey) ?? "";
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (paramName is not null)
+        {
+            _currentParameter = _paramList.FirstOrDefault(p => p.Name == paramName)!;
+            try
+            {
+                _currentParameter.Load(_confPath);
+            }
+            catch (Exception ex)
+            {
+                NavigationManager.NavigateTo("/parameters");
+                _modalText = ex.Message;
+                _isModalOpen = true;
+            }
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+    }
+
+    private void SaveParameter()
+    {
+        try
+        {
+            _currentParameter!.Save(_confPath, _currentParameter.CurrentValue);
+        }
+        catch (Exception ex)
+        {
+            _modalText = ex.Message;
+            _isModalOpen = true;
+        }
+    }
+
+    private void RestoreParameter()
+    {
+        try
+        {
+            _currentParameter!.RestoreToDefault(_confPath);
+            _currentParameter.CurrentValue = _currentParameter!.DefaultValue;
+        }
+        catch (Exception ex)
+        {
+            _modalText = ex.Message;
+            _isModalOpen = true;
+        }
+    }
+
+    private void SetFolderPath()
+    {
+        if (string.IsNullOrWhiteSpace(_confPath))
+        {
+            return;
+        }
+        LocalStorageService.SetItemAsync<string>(_confPathKey, _confPath);
+        _isPathSelected = true;
+    }
 }

@@ -1,33 +1,29 @@
-﻿
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
-<div class="nav vw-100 bg-black">
-    <nav id="navbar-container" class="navbar container text-center" data-bs-theme="dark">
-
-        <div class="nav-item gx-5" >
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All" data-text="Home">
-                <span aria-hidden="true"></span> Home
+﻿<header class="navbar d-flex justify-content-center sticky-top p-0 m-1">
+    <nav id="navbar-container" class="container rounded-2 p-3 pt-2 pb-2 m-0 vw-100">
+        <div class="nav-item d-flex align-items-center gx-5">
+            <NavLink class="nav-link" href="parameters" Match="NavLinkMatch.Prefix" data-text="Параметры">
+                <span aria-hidden="true"></span> Параметры
             </NavLink>
         </div>
-        <div class="nav-item gx-5" >
-            <NavLink class="nav-link" href="parameters" Match="NavLinkMatch.All" data-text="Список параметров">
-                <span aria-hidden="true"></span> Список параметров
-            </NavLink>
-        </div>
-        <div class="nav-item gx-5" >
+        <div class="nav-item d-flex align-items-center gx-5">
             <NavLink class="nav-link" href="pressets" Match="NavLinkMatch.All" data-text="Прессеты">
                 <span aria-hidden="true"></span> Прессеты
             </NavLink>
         </div>
-        <div class="nav-item gx-5" >
+        <div class="nav-item d-flex align-items-center gx-5">
             <NavLink class="nav-link" href="backups" Match="NavLinkMatch.All" data-text="Резервные копии">
                 <span aria-hidden="true"></span> Резервные копии
             </NavLink>
         </div>
-        <div class="nav-item gx-5" >
+        <div class="nav-item d-flex align-items-center gx-5">
             <NavLink class="nav-link" href="settings" Match="NavLinkMatch.All" data-text="Настройки">
                 <span aria-hidden="true"></span> Настройки
             </NavLink>
         </div>
+        <div class="nav-item d-flex align-items-center gx-5">
+            <NavLink class="nav-link" href="about" Match="NavLinkMatch.All" data-text="About">
+                <span class="align-items-center" aria-hidden="true"></span> О программе
+            </NavLink>
+        </div>
     </nav>
-</div>
+</header>

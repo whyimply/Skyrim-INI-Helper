@@ -1,11 +1,5 @@
-.page {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+.page-bg-color-custom {
     background-color: rgb(30, 30, 30);
-    color: white;   
-    overflow-x: hidden;
 }
 
 main {
@@ -43,7 +37,7 @@ main {
         width: 0;
     }
 
-    .top-row, article {
+    .top-row {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
