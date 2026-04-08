@@ -66,8 +66,4 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.5" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Resources\Data\pressets\" />
-    </ItemGroup>
-
 </Project>
