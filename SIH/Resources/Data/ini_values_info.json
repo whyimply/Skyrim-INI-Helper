@@ -34,13 +34,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "Рамка включена",
-        "ScreenshotPath": ""
+        "Remark": "Рамка включена"
       },
       {
         "Value": "1",
-        "Remark": "Рамка отключена",
-        "ScreenshotPath": ""
+        "Remark": "Рамка отключена"
       }
     ]
   },
@@ -116,23 +114,19 @@
     "ValueOptions": [
       {
         "Value": "5",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "7",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "9",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "11",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -154,23 +148,19 @@
     "ValueOptions": [
       {
         "Value": "5",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "7",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "9",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "11",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -192,13 +182,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "250",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -238,13 +226,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -266,13 +252,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -295,23 +279,19 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "5120",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "10240",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "102400",
-        "Remark": "Огромное значение вызывает значительное ухудшение качества теней.",
-        "ScreenshotPath": ""
+        "Remark": "Огромное значение вызывает значительное ухудшение качества теней."
       }
     ]
   },
@@ -351,33 +331,27 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "2048",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "4096",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "8192",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "16384",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -433,13 +407,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -461,13 +433,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -489,13 +459,11 @@
     "ValueOptions": [
       {
         "Value": "2",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "3",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -518,13 +486,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -546,13 +512,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -574,13 +538,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -724,13 +686,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -770,23 +730,19 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "10",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "100",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1000",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -826,18 +782,15 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "2",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -859,13 +812,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -940,18 +891,15 @@
     "ValueOptions": [
       {
         "Value": "10240",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "102400",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1024000",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -1144,18 +1092,15 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "200000",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "600000",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -1263,23 +1208,19 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "0.1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "3",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "12",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -1338,13 +1279,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -1366,13 +1305,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -1394,13 +1331,11 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -1423,18 +1358,15 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "5120",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "10240",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -1458,23 +1390,19 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "0.1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "3",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "12",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -1497,23 +1425,19 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "0.1",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "3",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "12",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },
@@ -1536,18 +1460,15 @@
     "ValueOptions": [
       {
         "Value": "0",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "200000",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       },
       {
         "Value": "600000",
-        "Remark": "",
-        "ScreenshotPath": ""
+        "Remark": ""
       }
     ]
   },

@@ -80,6 +80,5 @@ public class Parameter
     {
         required public string Value { get; set; }
         required public string Remark { get; set; }
-        required public string ScreenshotPath { get; set; }
     }
 }
